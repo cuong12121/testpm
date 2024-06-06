@@ -88,10 +88,10 @@
 		 
             // $text = preg_replace('/\s+/', ' ', $content[0]);
             
-            print_r(1);
+            // print_r($content);
 
 
-		    // print_r($model ->convertContent($content));
+		    print_r($model ->convertContent($content));
 		    
 		    die;
 		    
