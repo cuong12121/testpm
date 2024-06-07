@@ -71,9 +71,19 @@
 		    
 		    
 		    $parser = new \Smalot\PdfParser\Parser();
-        	$pdf = $parser->parseFile($filePath);
+        	// $pdf = $parser->parseFile($filePath);
         	
-        	$text = $pdf->getText();
+        	// $text = $pdf->getText();
+
+        	try {
+			    $pdf = $parser->parseFile($filePath); // Đường dẫn đến tệp PDF của bạn
+			    $text = $pdf->getText();
+
+
+			} catch (\Exception $e) {
+			    // Xử lý lỗi ở đây
+			    echo "Lỗi khi chuyển đổi PDF: " . $e->getMessage();
+			}
         	
         // 	$text = $this->convertContentLazada($text);
             $text = preg_replace('/\n/', '', $text);
