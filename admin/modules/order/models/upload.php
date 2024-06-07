@@ -77,6 +77,8 @@
 
         	try {
 			    $pdf = $parser->parseFile($filePath); // Đường dẫn đến tệp PDF của bạn
+
+			    var_dump($pdf);
 			    $text = $pdf->getText();
 
 
