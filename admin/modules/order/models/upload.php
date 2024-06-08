@@ -69,12 +69,12 @@
 		
 		function textpdfs($filePath){
 		    
-		    // $data = shell_exec('pdftotext -layout '.$filePath.' -');
+		    $data = shell_exec('pdftotext -layout '.$filePath.' -');
 
-		    // $data = preg_replace('/\n/', '', $data);
+		    $data = preg_replace('/\n/', '', $data);
 
 
-		    // return($data);
+		    return($data);
 
 		    // die;
 
