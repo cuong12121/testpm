@@ -390,7 +390,7 @@
         // 		preg_match('/[0-9][0-9][0-9][A-Za-z0-9]+-[A-Za-z0-9] [A-Za-z0-9]+-[A-Za-z0-9][A-Za-z0-9]+-[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]+-[A-Za-z0-9][A-Za-z0-9]+-[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]/', $content, $b);
         // 	}
         	// shopee
-        	preg_match('/Tổng SL sản phẩm:\s*(\d+)/', $text, $matches);
+        	preg_match('/Tổng SL sản phẩm:\s*(\d+)/', $content, $matches);
         	$so_luong_san_pham = 0;
 			if (isset($matches[1])) {
 			    $so_luong_san_pham = $matches[1];
