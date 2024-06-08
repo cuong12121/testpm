@@ -379,7 +379,7 @@
         function convertContent($content){
         
            
-        // 	$content = str_replace('(**) 1','(**)1 ',trim($content));
+        	$content = str_replace('(**) 1','(**)1 ',trim($content));
         	
         	
         	
