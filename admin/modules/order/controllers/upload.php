@@ -83,9 +83,9 @@
 		    
 		    $content = $model->textpdfs($path);
 
-		    // print_r($content);
+		    print_r($content);
 
-		    // die;
+		    die;
 		    
 		  //  print_r($model->convertContentLazada($content[0]));
 		  
