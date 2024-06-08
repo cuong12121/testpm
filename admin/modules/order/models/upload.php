@@ -69,21 +69,21 @@
 		
 		function textpdfs($filePath){
 		    
-		    $data = shell_exec('pdftotext  '.$filePath.' -');
+		    // $data = shell_exec('pdftotext -layout '.$filePath.' -');
 
-		    $data = preg_replace('/\n/', '', $data);
+		    // $data = preg_replace('/\n/', '', $data);
 
 
-		    return($data);
+		    // return($data);
 
-		    die;
+		    // die;
 
 
 
 		    $parser = new \Smalot\PdfParser\Parser();
-        	// $pdf = $parser->parseFile($filePath);
+        	$pdf = $parser->parseFile($filePath);
         	
-        	// $text = $pdf->getText();
+        	$text = $pdf->getText();
 
         	try {
 			    $pdf = $parser->parseFile($filePath); // Đường dẫn đến tệp PDF của bạn
