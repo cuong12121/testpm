@@ -98,7 +98,7 @@
 			}
         	
         // 	$text = $this->convertContentLazada($text);
-            $text = preg_replace('/\n/', '', $text);
+            $text = preg_replace('/\n/', ' ', $text);
 
             return $text;
             
