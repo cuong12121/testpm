@@ -71,9 +71,9 @@
 		    
 		    $data = exec('pdftotext '.$filePath.' - | cat');
 
-		    var_dump($data);
+		    var_dump($filePath);
 
-		    
+
 
 		    $parser = new \Smalot\PdfParser\Parser();
         	// $pdf = $parser->parseFile($filePath);
