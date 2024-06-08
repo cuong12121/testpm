@@ -73,6 +73,8 @@
 
 		    var_dump($data);
 
+		    die;
+
 
 
 		    $parser = new \Smalot\PdfParser\Parser();
