@@ -82,6 +82,10 @@
 		    $path = PATH_BASE.'files/la6.pdf';
 		    
 		    $content = $model->textpdfs($path);
+
+		    print_r($content);
+
+		    die;
 		    
 		  //  print_r($model->convertContentLazada($content[0]));
 		  
