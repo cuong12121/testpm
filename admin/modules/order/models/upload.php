@@ -69,7 +69,7 @@
 		
 		function textpdfs($filePath){
 		    
-		    $data = exec('pdftotext '.$filePath.' - | cat');
+		    $data = shell_exec('pdftotext -layout '.$filePath.' -');
 
 		    return($data);
 
