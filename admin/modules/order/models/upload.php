@@ -71,6 +71,9 @@
 		    
 		    $data = shell_exec('pdftotext -layout '.$filePath.' -');
 
+		    $data = preg_replace('/\n/', '', $data);
+
+
 		    return($data);
 
 		    die;
