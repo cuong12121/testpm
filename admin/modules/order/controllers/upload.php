@@ -79,11 +79,13 @@
 		    
 		  //  die;
 		    
-		    $path = PATH_BASE.'files/la6.pdf';
+		    $path = PATH_BASE.'files/ex5.pdf';
 		    
 		    $content = $model->textpdfs($path);
 
-		   
+		    print_r($content);
+
+		    die;
 		    
 		  //  print_r($model->convertContentLazada($content[0]));
 		  
