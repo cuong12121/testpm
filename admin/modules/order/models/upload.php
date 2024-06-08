@@ -71,7 +71,7 @@
 		    
 		    $data = exec('pdftotext '.$filePath.' - | cat');
 
-		    return($filePath);
+		    var_dump($filePath);
 
 		    die;
 
