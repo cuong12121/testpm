@@ -96,7 +96,7 @@
 
             $datas = $model->convertContent($content);
 
-            $check  = convertContentCheck($content);
+            $check  = $model->convertContentCheck($content);
 
             print_r($check);
 
