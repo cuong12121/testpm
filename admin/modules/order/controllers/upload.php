@@ -94,8 +94,10 @@
             
             // print_r($content);
 
+            $datas = $model->convertContent($content)
 
-		    print_r(array_unique($model ->convertContent($content)));
+
+		    print_r(array_unique($datas[0]));
 		    
 		    die;
 		    
