@@ -95,7 +95,7 @@
             // print_r($content);
 
 
-		    print_r($model ->convertContent($content));
+		    print_r(array_unique($model ->convertContent($content)));
 		    
 		    die;
 		    
