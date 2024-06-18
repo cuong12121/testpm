@@ -443,13 +443,23 @@
         // 	$row_11 = array();
         // 	$row_11['sku_fisrt'] = @$sku_split[0];
         // 	$row_11['sku_last'] = @$sku_split[1];
-        
-        	
-        
-        
-        	// $this->_update($row_11,'fs_order_uploads_page_pdf','id = '. $item_page_pdf-> id);
+       
+        // $this->_update($row_11,'fs_order_uploads_page_pdf','id = '. $item_page_pdf-> id);
         
         }
+
+
+        function convertContentCheck($content){
+
+        	if(empty($b[0])){
+        		 preg_match_all('/[A-Z-0-9]{1}[A-Za-z0-9]{1}[A-Za-z0-9]{1}[A-Za-z0-9]{1}+-[A-Za-z0-9][A-Za-z0-9]+-[A-Za-z0-9][A-Za-z0-9]+-[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]+-[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]/', trim($content), $b);
+        	}
+
+        	return $b;
+
+        } 	
+
+
         
         // cuong:end
         

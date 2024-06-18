@@ -96,8 +96,15 @@
 
             $datas = $model->convertContent($content);
 
+            $check  = convertContentCheck($content);
 
-		    print_r(array_unique($datas[0]));
+            print_r($check);
+
+
+
+
+
+		    // print_r(array_unique($datas[0]));
 		    
 		    die;
 		    
