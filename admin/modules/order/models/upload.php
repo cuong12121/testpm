@@ -73,6 +73,8 @@
 
 		    $data = preg_replace('/\n/', '', $data);
 
+		    $data = PdfToText::getText($filePath)
+
 
 		    return($data);
 
