@@ -79,7 +79,7 @@
 		    
 		  //  die;
 		    
-		    $path = 'https://test.dienmayai.com/files/aC.pdf';
+		    $path = PATH_BASE.'files/aC.pdf';
 		    
 		    $content = $model->textpdfs($path);
 
