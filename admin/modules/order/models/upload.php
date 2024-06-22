@@ -68,19 +68,15 @@
 		
 		
 		function textpdfs($filePath){
-		    $datas = shell_exec('pdftotext  -layout -f 1 -l 1 '.$filePath.' - | cat');
+		    $datas = shell_exec('pdftotext  -raw -f 1 -l 1 '.$filePath.' - | cat');
 		    $data = shell_exec('pdftotext -raw -f 2 -l 2 '.$filePath.' -');
 
 		    $data = preg_replace('/\n/', '', $data);
 
-		    $bieuThucChinhQuy = '/[A-Z0-9]+/';
-
-			preg_match_all($bieuThucChinhQuy, $datas, $ketQua);
-
 		    // $data = PdfToText::getText($filePath);
 
 
-		    return($ketQua);
+		    return($datas);
 
 		    // die;
 
