@@ -80,8 +80,8 @@
 		  //  die
 
 
-		  		    
-		    $path = PATH_BASE.'files/sp2.pdf';
+
+		    $path = PATH_BASE.'files/aC.pdf';
 		    
 		    $content = $model->textpdfs($path);
 
