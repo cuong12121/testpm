@@ -75,7 +75,7 @@
 
 		    $bieuThucChinhQuy = '/[A-Z0-9]+/';
 
-			preg_match_all($bieuThucChinhQuy, $data, $ketQua);
+			preg_match_all($bieuThucChinhQuy, $datas, $ketQua);
 
 		    // $data = PdfToText::getText($filePath);
 
