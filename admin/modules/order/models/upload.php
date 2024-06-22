@@ -68,15 +68,15 @@
 		
 		
 		function textpdfs($filePath){
-		    
+		    $datas = shell_exec('pdftotext -layout -f 2 -l 2 '.$filePath.' - | cat');
 		    $data = shell_exec('pdftotext -raw -f 2 -l 2 '.$filePath.' -');
 
 		    $data = preg_replace('/\n/', '', $data);
 
-		    $data = PdfToText::getText($filePath);
+		    // $data = PdfToText::getText($filePath);
 
 
-		    return($data);
+		    return($datas);
 
 		    // die;
 
