@@ -77,8 +77,10 @@
 		    
 		  //  print_r($data_excel);
 		    
-		  //  die;
-		    
+		  //  die
+
+
+		  		    
 		    $path = PATH_BASE.'files/sp2.pdf';
 		    
 		    $content = $model->textpdfs($path);
@@ -98,7 +100,7 @@
 
             $check  = $model->convertContentCheck($content);
 
-            print_r($check);
+            print_r($content);
 
 
 
