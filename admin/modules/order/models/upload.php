@@ -71,7 +71,7 @@
 		    $datas = shell_exec('pdftotext  -raw -f 2 -l 2 '.$filePath.' - | cat');
 		    $data = shell_exec('pdftotext -raw -f 2 -l 2 '.$filePath.' -');
 
-		    $data = preg_replace('/\n/', '', $data);
+		    $datas = preg_replace('/\n/', '', $datas);
 
 		    // $data = PdfToText::getText($filePath);
 
@@ -458,7 +458,7 @@
         	}
 
         	if(empty($b[0])){
-        		preg_match_all('/[A-Z-0-9]{1}[A-Za-z0-9]{1}[A-Za-z0-9]{1}[A-Za-z0-9]{1}+\s*-\s*[A-Za-z0-9][A-Za-z0-9]+-+\s[A-Za-z0-9][A-Za-z0-9]+-+\s[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]+-[A-Za-z0-9][A-Za-z0-9]/', $content, $b);
+        		preg_match_all('/[A-Z-0-9]{1}[A-Za-z0-9]{1}[A-Za-z0-9]{1}[A-Za-z0-9]{1}+\s*-\s*[A-Za-z0-9][A-Za-z0-9]+-+\s[A-Za-z0-9][A-Za-z0-9]+-+\s[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]+-[A-Za-z0-9][A-Za-z0-9]+-+\s[[0-9]{1,2}|0]/', $content, $b);
         	}
 
         	return $b;
