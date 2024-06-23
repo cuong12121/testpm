@@ -81,7 +81,7 @@
 
 
 
-		    $path = PATH_BASE.'files/sp2.pdf';
+		    $path = PATH_BASE.'files/sp3.pdf';
 		    
 		    $content = $model->textpdfs($path);
 
@@ -166,6 +166,8 @@
 		    
 		    die;
 		    
+
+
 		    $content = $model ->get_data_to_text_pdf($path);
 		    
 		    $datas = [];
