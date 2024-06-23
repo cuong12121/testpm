@@ -71,7 +71,7 @@
 		    $datas = shell_exec('pdftotext  -raw -f 2 -l 2 '.$filePath.' - | cat');
 		    $data = shell_exec('pdftotext -raw -f 2 -l 2 '.$filePath.' -');
 
-		    $datas = preg_replace('/\n/', '', $datas);
+		    // $datas = preg_replace('/\n/', '', $datas);
 
 		    // $data = PdfToText::getText($filePath);
 
