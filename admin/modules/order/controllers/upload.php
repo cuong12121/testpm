@@ -100,7 +100,7 @@
 
             $check  = $model->convertContentCheck($content);
 
-            print_r($check);
+            print_r($content);
 
 
 
