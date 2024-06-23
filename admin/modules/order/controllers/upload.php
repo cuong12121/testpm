@@ -81,7 +81,7 @@
 
 
 
-		    $path = PATH_BASE.'files/sp5.pdf';
+		    $path = PATH_BASE.'files/sp6.pdf';
 		    
 		    $content = $model->textpdfs($path);
 
