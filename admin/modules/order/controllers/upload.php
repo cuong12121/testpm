@@ -62,8 +62,10 @@
 		    $data = [];
 		    
 		    $model  = $this -> model;
+
+		    $file = $_GET['file']??'sp4.pdf';
 		   
-		    $path = PATH_BASE.'files/sp4.pdf';
+		    $path = PATH_BASE.'files/'.$file;
 
 		    $datass = shell_exec('pdftotext -f 1 -l  1 '.$path.' -');
 
