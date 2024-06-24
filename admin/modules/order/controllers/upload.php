@@ -61,7 +61,9 @@
 		    
 		    $data = [];
 
-		     print_r($_GET ['file']);
+		    print_r(FSInput::get('file'));
+
+		    
 		    
 		    $model  = $this -> model;
 
