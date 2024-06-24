@@ -51,27 +51,41 @@
         }
         
         
-        function testpdf($filePath){
+        function findMVD($content){
 		    
             // $text = trim(PdfToText::getText($filePath));
-
-            $text = $this->textpdfs($filePath);
         
             // Tìm mã vận đơn (sau "Mã vận đơn:" và trên cùng một dòng)
-            preg_match_all('/Mã vận đơn:\s*(\S+)/', $text, $maVanDonMatches);
+            preg_match_all('/Mã vận đơn:\s*(\S+)/', $content, $maVanDonMatches);
             $maVanDon = isset($maVanDonMatches[1]) ? $maVanDonMatches[1] : null;
-            
-            
-            
-            
             return $maVanDon;
             
-		}    
+		}   
+
+		function contendTextFindMvd($filePath,$page)
+		{
+		 	$data = shell_exec('pdftotext -f '.$page.' -l '.$page.' '.$filePath.' -');
+
+		 	$mavd = $this->findMVD($data);
+
+		 	return $mavd;
+		} 
+
+		function contendTextFindSku($filePath, $page)
+		{
+		 	$data = shell_exec('pdftotext  -raw -f '.$page.' -l '.$page.' '.$filePath.' - | cat');
+
+		 	$Sku = $this->convertContentCheck($content);
+
+		 	return $Sku;
+		} 
 		
 		
 		function textpdfs($filePath){
 		    $datas = shell_exec('pdftotext  -raw -f 1 -l 1 '.$filePath.' - | cat');
 		    $data = shell_exec('pdftotext -f 1 -l 1 '.$filePath.' -');
+
+
 
 		    // $datas = preg_replace('/\n/', '', $datas);
 

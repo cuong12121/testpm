@@ -59,36 +59,31 @@
 		function test(){
 		    
 		    
-		    
+		    $data = [];
 		    
 		    $model  = $this -> model;
-		    
-		  //  $path_file_ex = PATH_BASE.'files/ex5.xlsx';
-		    
-		  //  $data_excel = $model->showDataExcelShopee($path_file_ex);
-		    
-		  //  echo'<pre>';
-		    
-		  //  print_r($data_excel);
-		    
-		  //  echo '</pre>';
-		    
-		  //  die;
-		    
-		  //  print_r($data_excel);
-		    
-		  //  die
-
-
-
+		   
 		    $path = PATH_BASE.'files/sp6.pdf';
 
-		    $mvd = $model->testpdf($path);
+		    $mvd = $model->contendTextFindMvd($path,1);
 
-		    print_r($mvd);
+		    $sku = $model->contendTextFindSku($path,1);
+
+		    $data[1]['mavandon'] = $mvd[0];
+
+		    $data[1]['sku'] = $sku;
+
+		    print_r($data[1]);
 
 		    die;
-		    
+
+		    // $mvd = $model->testpdf($path);
+
+		    // print_r($mvd);
+
+		    // die;
+
+
 		    $content = $model->textpdfs($path);
 
 		    // print_r($content);
