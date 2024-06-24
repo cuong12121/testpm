@@ -67,7 +67,7 @@
 		   
 		    $path = PATH_BASE.'files/'.$file;
 
-		    $option !empty($_GET['otion'])?$_GET['otion']:'';
+		    $option = !empty($_GET['option'])?$_GET['option']:'';
 
 		    $datass = shell_exec('pdftotext '.$option.' -f 1 -l  1 '.$path.' -');
 
