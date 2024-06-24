@@ -71,14 +71,14 @@
 		
 		function textpdfs($filePath){
 		    $datas = shell_exec('pdftotext  -raw -f 1 -l 1 '.$filePath.' - | cat');
-		    $data = shell_exec('pdftotext -raw -f 2 -l 2 '.$filePath.' -');
+		    $data = shell_exec('pdftotext -f 1 -l 1 '.$filePath.' -');
 
 		    // $datas = preg_replace('/\n/', '', $datas);
 
 		    // $data = PdfToText::getText($filePath);
 
 
-		    return($datas);
+		    return($data);
 
 		    // die;
 
