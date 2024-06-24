@@ -71,7 +71,7 @@
 
 		    $datass = shell_exec('pdftotext '.$option.' -f 1 -l  1 '.$path.' -');
 
-		    $convert = $model->convertContentCheck($content);
+		    $convert = $model->convertContentCheck($datass);
 
 		    $select = !empty($_GET['select'])?1:'0';
 
