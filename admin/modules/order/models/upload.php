@@ -75,7 +75,7 @@
 		{
 		 	$data = shell_exec('pdftotext  -raw -f '.$page.' -l '.$page.' '.$filePath.' - | cat');
 
-		 	$Sku = $this->convertContentCheck($content);
+		 	$Sku = $this->convertContentCheck($data);
 
 		 	return $Sku;
 		} 
