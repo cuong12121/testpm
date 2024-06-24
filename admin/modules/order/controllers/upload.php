@@ -67,23 +67,23 @@
 		   
 		    $path = PATH_BASE.'files/'.$file;
 
-		    $option = !empty($_GET['option'])?$_GET['option']:'';
+		    // $option = !empty($_GET['option'])?$_GET['option']:'';
 
-		    $datass = shell_exec('pdftotext '.$option.' -f 1 -l  1 '.$path.' -');
+		    // $datass = shell_exec('pdftotext '.$option.' -f 1 -l  1 '.$path.' -');
 
-		    $convert = $model->convertContentCheck($datass);
+		    // $convert = $model->convertContentCheck($datass);
 
-		    $select = !empty($_GET['select'])?1:'0';
+		    // $select = !empty($_GET['select'])?1:'0';
 
-		    if($select ==1){
-		    	print_r($convert);
-		    }
-		    else{
-		    	echo $datass;
-		    }
+		    // if($select ==1){
+		    // 	print_r($convert);
+		    // }
+		    // else{
+		    // 	echo $datass;
+		    // }
 
 			
-		    die;
+		    // die;
 
 		    $mvd = $model->contendTextFindMvd($path,1);
 
