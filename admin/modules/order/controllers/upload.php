@@ -71,7 +71,18 @@
 
 		    $datass = shell_exec('pdftotext '.$option.' -f 1 -l  1 '.$path.' -');
 
-			echo $datass;
+		    $convert = $model->convertContentCheck($content);
+
+		    $select = !empty($_GET['select'])?1:'0';
+
+		    if($select ==1){
+		    	echo $convert;
+		    }
+		    else{
+		    	echo $datass;
+		    }
+
+			
 		    die;
 
 		    $mvd = $model->contendTextFindMvd($path,1);
