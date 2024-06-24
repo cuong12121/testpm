@@ -56,13 +56,13 @@
             $text = trim(PdfToText::getText($filePath));
         
             // Tìm mã vận đơn (sau "Mã vận đơn:" và trên cùng một dòng)
-            // preg_match_all('/Mã vận đơn:\s*(\S+)/', $text, $maVanDonMatches);
-            // $maVanDon = isset($maVanDonMatches[1]) ? $maVanDonMatches[1] : null;
+            preg_match_all('/Mã vận đơn:\s*(\S+)/', $text, $maVanDonMatches);
+            $maVanDon = isset($maVanDonMatches[1]) ? $maVanDonMatches[1] : null;
             
             
             
             
-            return $text;
+            return $maVanDon;
             
 		}    
 		

@@ -82,6 +82,12 @@
 
 
 		    $path = PATH_BASE.'files/sp6.pdf';
+
+		    $mvd = $model->testpdf($path);
+
+		    print_r($mvd);
+
+		    die;
 		    
 		    $content = $model->textpdfs($path);
 
