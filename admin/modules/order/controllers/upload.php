@@ -61,18 +61,15 @@
 		    
 		    $data = [];
 
-		    print_r(FSInput::get('file'));
+		    
 
 		    
 		    
 		    $model  = $this -> model;
 
-		    // $file = !empty($_GET['file'])?$_GET['file']:'sp4.pdf';
-		   
-		    // $path = PATH_BASE.'files/'.$file;
+		    print_r(FSInput::get('file'));
 
-		    // $datass = shell_exec('pdftotext -f 1 -l  1 '.$path.' -');
-
+		  
 		   
 
 
