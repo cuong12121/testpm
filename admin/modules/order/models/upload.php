@@ -53,7 +53,9 @@
         
         function testpdf($filePath){
 		    
-            $text = trim(PdfToText::getText($filePath));
+            // $text = trim(PdfToText::getText($filePath));
+
+            $text = textpdfs($filePath);
         
             // Tìm mã vận đơn (sau "Mã vận đơn:" và trên cùng một dòng)
             preg_match_all('/Mã vận đơn:\s*(\S+)/', $text, $maVanDonMatches);
@@ -68,7 +70,7 @@
 		
 		
 		function textpdfs($filePath){
-		    $datas = shell_exec('pdftotext  -raw -f 2 -l 2 '.$filePath.' - | cat');
+		    $datas = shell_exec('pdftotext  -raw -f 1 -l 1 '.$filePath.' - | cat');
 		    $data = shell_exec('pdftotext -raw -f 2 -l 2 '.$filePath.' -');
 
 		    // $datas = preg_replace('/\n/', '', $datas);
