@@ -61,7 +61,7 @@
 		    
 		    $data = [];
 
-		     print_r($_GET['file']);
+		     print_r($_GET ['file']);
 		    
 		    $model  = $this -> model;
 
