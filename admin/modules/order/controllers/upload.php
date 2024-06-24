@@ -65,11 +65,11 @@
 
 		    $file = !empty($_GET['file'])?$_GET['file']:'sp4.pdf';
 		   
-		    $path = PATH_BASE.'files/'.$file;
+		    // $path = PATH_BASE.'files/'.$file;
 
-		    $datass = shell_exec('pdftotext -f 1 -l  1 '.$path.' -');
+		    // $datass = shell_exec('pdftotext -f 1 -l  1 '.$path.' -');
 
-		    print_r($path);
+		    print_r($file);
 
 
 		    die;
