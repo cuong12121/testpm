@@ -69,7 +69,7 @@
 
 		    $datass = shell_exec('pdftotext -f 1 -l  1 '.$path.' -');
 
-		    print_r($datass);
+		    print_r($path);
 
 
 		    die;
