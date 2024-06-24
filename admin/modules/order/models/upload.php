@@ -60,7 +60,7 @@
             $maVanDon = isset($maVanDonMatches[1]) ? $maVanDonMatches[1] : null;
 
             if(empty($maVanDon)){
-            	preg_match_all('/Mã đơn hàng:\s*(\S+)/', $content, $maVanDonMatches);
+            	preg_match_all('/Mã đơn hàng:\s*([A-Z0-9]+)/', $content, $maVanDonMatches);
             	$maVanDon = isset($maVanDonMatches[1]) ? $maVanDonMatches[1] : null;
             }
             return $maVanDon;
@@ -486,7 +486,7 @@
         	if(empty($b[0])){
         		preg_match_all('/[A-Z-0-9]{1}[A-Za-z0-9]{1}[A-Za-z0-9]{1}[A-Za-z0-9]{1}+\s*-\s*[A-Za-z0-9][A-Za-z0-9]+\s*-\s*[A-Za-z0-9][A-Za-z0-9]+\s*-\s*[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]+\s*-\s*[A-Za-z0-9][A-Za-z0-9]+\s*-\s*[[0-9]{1,2}|0]/', $content, $b);
         	}
-
+            // xóa khoảng trắng trong chuỗi trả về của hàm trên
             $b = array_map(function($match) {
                 return preg_replace('/\s+/', '', $match);
             }, $b);
