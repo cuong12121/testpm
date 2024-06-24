@@ -63,7 +63,7 @@
 		    
 		    $model  = $this -> model;
 
-		    $file = $_GET['file']??'sp4.pdf';
+		    $file = !empty($_GET['file'])?$_GET['file']:'sp4.pdf';
 		   
 		    $path = PATH_BASE.'files/'.$file;
 
