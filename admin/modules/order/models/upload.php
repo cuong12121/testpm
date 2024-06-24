@@ -60,6 +60,7 @@
             $maVanDon = isset($maVanDonMatches[1]) ? $maVanDonMatches[1] : null;
 
             if(empty($maVanDon)){
+
             	preg_match_all('/Mã đơn hàng:\s*([A-Z0-9]+)/', $content, $maVanDonMatches);
             	$maVanDon = isset($maVanDonMatches[1]) ? $maVanDonMatches[1] : null;
             }
@@ -69,7 +70,7 @@
 
 		function contendTextFindMvd($filePath,$page)
 		{
-		 	$data = shell_exec('pdftotext -f '.$page.' -l '.$page.' '.$filePath.' -');
+		 	$data = shell_exec('pdftotext -layout -f '.$page.' -l '.$page.' '.$filePath.' -');
 
 		 	$mavd = $this->findMVD($data);
 
