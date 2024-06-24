@@ -55,7 +55,7 @@
 		    
             // $text = trim(PdfToText::getText($filePath));
 
-            $text = textpdfs($filePath);
+            $text = $this->textpdfs($filePath);
         
             // Tìm mã vận đơn (sau "Mã vận đơn:" và trên cùng một dòng)
             preg_match_all('/Mã vận đơn:\s*(\S+)/', $text, $maVanDonMatches);
