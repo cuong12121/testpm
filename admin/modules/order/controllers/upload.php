@@ -76,7 +76,7 @@
 		    $select = !empty($_GET['select'])?1:'0';
 
 		    if($select ==1){
-		    	echo $convert;
+		    	print_r($convert);
 		    }
 		    else{
 		    	echo $datass;
