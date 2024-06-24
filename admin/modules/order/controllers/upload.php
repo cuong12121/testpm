@@ -67,7 +67,7 @@
 		   
 		    $path = PATH_BASE.'files/'.$file;
 
-		    $datass = shell_exec('pdftotext raw -f 1 -l  1 '.$path.' -');
+		    $datass = shell_exec('pdftotext -raw -f 1 -l  1 '.$path.' -');
 
 			echo $datass;
 		    die;
