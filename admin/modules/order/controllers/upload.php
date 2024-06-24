@@ -63,7 +63,7 @@
 		    
 		    $model  = $this -> model;
 		   
-		    $path = PATH_BASE.'files/sp6.pdf';
+		    $path = PATH_BASE.'files/sp5.pdf';
 
 		    $mvd = $model->contendTextFindMvd($path,1);
 
