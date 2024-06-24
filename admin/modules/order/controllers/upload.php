@@ -65,6 +65,13 @@
 		   
 		    $path = PATH_BASE.'files/sp4.pdf';
 
+		    $datass = shell_exec('pdftotext -f 1 -l  1 '.$filePath.' -');
+
+		    print_r($datass);
+
+
+		    die;
+
 		    $mvd = $model->contendTextFindMvd($path,1);
 
 		    $sku = $model->contendTextFindSku($path,1);
