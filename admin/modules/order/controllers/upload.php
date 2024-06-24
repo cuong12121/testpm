@@ -69,7 +69,7 @@
 
 		    $datass = shell_exec('pdftotext -f 1 -l  1 '.$path.' -');
 
-	
+			echo $path;
 		    die;
 
 		    $mvd = $model->contendTextFindMvd($path,1);
