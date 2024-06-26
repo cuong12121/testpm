@@ -69,7 +69,7 @@
 
 		    $datas = shell_exec('pdftk '.$path.' dump_data | grep NumberOfPages');
 
-		    echo  intval($datas);
+		    echo  $datas;
 
 		    die;
 
