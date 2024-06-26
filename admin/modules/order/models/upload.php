@@ -1732,9 +1732,10 @@
              $k=0;
             //chạy vòng đầu để check lỗi trước
             for($j=2;$j<=$heightRow;$j++){
-                $k++;
+                
                
                 $row[$k]['maVanDon'] = trim($data[$j]['F']);
+                $k++;
 
             }  
 
