@@ -67,6 +67,14 @@
 		   
 		    $path = PATH_BASE.'files/'.$file;
 
+
+		    $datas = shell_exec('pdftotext -layout '.$path.' - | wc -l');
+
+		    echo $datas;
+
+
+		    die;
+
 		    // $option = !empty($_GET['option'])?$_GET['option']:'';
 
 		    // $datass = shell_exec('pdftotext '.$option.' -f 1 -l  1 '.$path.' -');
