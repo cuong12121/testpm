@@ -82,7 +82,7 @@
 
 		   	}
 
-		   	print_r('<pre>'.$data.'</pre>');
+		   	return $data;
 		}
 		
 		
@@ -96,7 +96,7 @@
 
 		    $data = $this->returnDataPDF($path);
 
-		    var_dump($data);
+		    echo'<pre>'; var_dump($data); echo '</pre>';
 
 		    die;
 
