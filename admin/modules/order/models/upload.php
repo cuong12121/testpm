@@ -83,7 +83,7 @@
 
 		 	$Sku = $this->convertContentCheck($data);
 
-		 	return $Sku;
+		 	return $Sku[0]??'';
 		} 
 		
 		
