@@ -1731,11 +1731,11 @@
             //chạy vòng đầu để check lỗi trước
             for($j=1;$j<=$heightRow;$j++){
                 $row = array();
-                $row['maVanDon'] = trim($data[$j]['F']);
+                $row[$j]['maVanDon'] = trim($data[$j]['F']);
 
             }  
 
-            return($row['maVanDon']);  
+            return($row);  
         }
 		
 		
