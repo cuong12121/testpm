@@ -52,11 +52,47 @@
 			$pagination = $model->getPagination();
 			include 'modules/'.$this->module.'/views/'.$this->view.'/list.php';
 		}
+
+
+		public function returnDataPDF($path)
+		{
+			$datas = shell_exec('pdftk '.$path.' dump_data | grep NumberOfPages');
+
+		    $number_page = intval(str_replace('NumberOfPages: ', '', $datas));
+
+		   	if($number_page>0){
+
+		   		for($i =0; $i<$number_page $i++){
+
+		   			$mvd = $model->contendTextFindMvd($path,1);
+
+				    $sku = $model->contendTextFindSku($path,1);
+
+				    $data[$i]['mavandon'] = $mvd[0]??'';
+
+				    $data[$i]['sku'] = $sku??'';
+
+		   		}
+
+		   	}
+		}
 		
 		
 		
 		
 		function test(){
+
+			$file = !empty($_GET['file'])?$_GET['file']:'sp4.pdf';
+		   
+		    $path = PATH_BASE.'files/'.$file;
+
+		    $data = $this->returnDataPDF($path);
+
+		    var_dump($data);
+
+		    die;
+
+
 		    
 		    
 		    $data = [];
@@ -69,7 +105,23 @@
 
 		    $datas = shell_exec('pdftk '.$path.' dump_data | grep NumberOfPages');
 
-		    echo  intval(str_replace('NumberOfPages: ', '', $datas));
+		    $number_page = intval(str_replace('NumberOfPages: ', '', $datas));
+
+		   	if($number_page>0){
+
+		   		for($i =0; $i<$number_page $i++){
+
+		   			$mvd = $model->contendTextFindMvd($path,1);
+
+				    $sku = $model->contendTextFindSku($path,1);
+
+				    $data[$i]['mavandon'] = $mvd[0]??'';
+
+				    $data[$i]['sku'] = $sku??'';
+
+		   		}
+
+		   	}
 
 		    die;
 
