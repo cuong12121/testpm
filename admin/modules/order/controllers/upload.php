@@ -54,8 +54,10 @@
 		}
 
 
-		public function returnDataPDF($path)
+		function returnDataPDF($path)
 		{
+			$model  = $this -> model;
+
 			$datas = shell_exec('pdftk '.$path.' dump_data | grep NumberOfPages');
 
 		    $number_page = intval(str_replace('NumberOfPages: ', '', $datas));
