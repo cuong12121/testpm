@@ -69,7 +69,7 @@
 
 		    $datas = shell_exec('pdftk '.$path.' dump_data | grep NumberOfPages');
 
-		    echo  $datas;
+		    echo  str_replace('NumberOfPages: ', '', $datas);
 
 		    die;
 
