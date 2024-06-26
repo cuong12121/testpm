@@ -1729,7 +1729,7 @@
             $link = FSRoute::_('index.php?module=order&view=upload&task=add');
 
             //chạy vòng đầu để check lỗi trước
-            for($j=2;$j<=$heightRow;$j++){
+            for($j=1;$j<=$heightRow;$j++){
                 $row = array();
                 $row['maVanDon'] = trim($data[$j]['F']);
 
