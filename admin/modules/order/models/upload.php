@@ -1704,6 +1704,39 @@
 				}
 			}
 		}
+
+
+
+        public function showDataExcel()
+        {
+            $files = 'ex2.xlsx';
+            $file_path = PATH_BASE.'files/'.$file;
+            require_once("../libraries/PHPExcel-1.8/Classes/PHPExcel.php");
+            $objReader = PHPExcel_IOFactory::createReaderForFile($file_path);
+            // $data = new PHPExcel_IOFactory();
+            // $data->setOutputEncoding('UTF-8');
+            $objReader->setLoadAllSheets();
+            $objexcel = $objReader->load($file_path);
+            $data =$objexcel->getActiveSheet()->toArray('null',true,true,true);
+            // $data->load($file_path);
+            unset($heightRow);  
+            $heightRow=$objexcel->setActiveSheetIndex()->getHighestRow();
+            // printr($data);
+            unset($j);
+
+
+
+            $link = FSRoute::_('index.php?module=order&view=upload&task=add');
+
+            //chạy vòng đầu để check lỗi trước
+            for($j=2;$j<=$heightRow;$j++){
+                $row = array();
+                $row['maVanDon'] = trim($data[$j]['F']);
+
+            }  
+
+            return($row['maVanDon']);  
+        }
 		
 		
 		function retun_file_pdf_test($path){

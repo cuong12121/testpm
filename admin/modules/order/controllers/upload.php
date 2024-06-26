@@ -94,6 +94,12 @@
 		   
 		    $path = PATH_BASE.'files/'.$file;
 
+		    $test =  $this->showDataExcel();
+
+		    var_dump($test);
+
+		    die;
+
 		    $data = $this->returnDataPDF($path);
 
 		    echo'<pre>'; var_dump($data); echo '</pre>';
