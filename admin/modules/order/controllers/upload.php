@@ -82,7 +82,7 @@
 
 		   	}
 
-		   	return $data;
+		   	print_r('<pre>'.$data.'</pre>');
 		}
 		
 		
