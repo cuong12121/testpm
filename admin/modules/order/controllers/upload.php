@@ -90,11 +90,13 @@
 		
 		function test(){
 
+			$model  = $this -> model;
+			
 			$file = !empty($_GET['file'])?$_GET['file']:'sp4.pdf';
 		   
 		    $path = PATH_BASE.'files/'.$file;
 
-		    $test =  $this->showDataExcel();
+		    $test =  $model->showDataExcel();
 
 		    var_dump($test);
 
