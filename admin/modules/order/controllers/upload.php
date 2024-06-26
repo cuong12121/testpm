@@ -67,8 +67,7 @@
 		   
 		    $path = PATH_BASE.'files/'.$file;
 
-
-		    $datas = shell_exec('pdftotext -layout '.$path.' - | wc -l');
+		    $datas = shell_exec('pdftk '.$path.' dump_data | grep NumberOfPages');
 
 		    echo $datas;
 
