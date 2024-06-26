@@ -62,7 +62,7 @@
 
 		   	if($number_page>0){
 
-		   		for($i =0; $i<$number_page $i++){
+		   		for($i =0; $i<$number_page; $i++){
 
 		   			$mvd = $model->contendTextFindMvd($path,1);
 
