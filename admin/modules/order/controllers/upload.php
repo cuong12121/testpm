@@ -58,6 +58,8 @@
 		{
 			$model  = $this -> model;
 
+			$data  = [];
+
 			$datas = shell_exec('pdftk '.$path.' dump_data | grep NumberOfPages');
 
 		    $number_page = intval(str_replace('NumberOfPages: ', '', $datas));
@@ -79,6 +81,8 @@
 		   		}
 
 		   	}
+
+		   	return $data;
 		}
 		
 		
