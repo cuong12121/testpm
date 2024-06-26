@@ -1728,10 +1728,13 @@
 
             $link = FSRoute::_('index.php?module=order&view=upload&task=add');
              $row = array();
+
+             $k=0;
             //chạy vòng đầu để check lỗi trước
             for($j=2;$j<=$heightRow;$j++){
+                $k++;
                
-                $row[$j]['maVanDon'] = trim($data[$j]['F']);
+                $row[$k]['maVanDon'] = trim($data[$j]['F']);
 
             }  
 
