@@ -66,9 +66,11 @@
 
 		   		for($i =0; $i<$number_page; $i++){
 
-		   			$mvd = $model->contendTextFindMvd($path,1);
+		   			$page = $i+1;
 
-				    $sku = $model->contendTextFindSku($path,1);
+		   			$mvd = $model->contendTextFindMvd($path,$page);
+
+				    $sku = $model->contendTextFindSku($path,$page);
 
 				    $data[$i]['mavandon'] = $mvd[0]??'';
 
