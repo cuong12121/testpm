@@ -89,6 +89,10 @@
 		{
 			$model  = $this -> model;
 
+			$file = !empty($_GET['file'])?$_GET['file']:'sp4.pdf';
+		   
+		    $path = PATH_BASE.'files/'.$file;
+			
 			$data = $this->returnDataPDF($path);
 
 		    echo'<pre>'; var_dump($data); echo '</pre>';
