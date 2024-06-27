@@ -98,7 +98,7 @@
 
 		    $test =  $model->showDataExcel();
 
-		    echo'<pre>'; var_dump($data); echo '</pre>';
+		    echo'<pre>'; var_dump($test); echo '</pre>';
 
 		    die;
 
