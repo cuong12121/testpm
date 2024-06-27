@@ -110,7 +110,7 @@
 		   
 		    $path = PATH_BASE.'files/'.$file;
 
-		    $test =  $model->showDataExcel();
+		    $test =  $model->showDataExcel($path);
 
 		    echo'<pre>'; var_dump($test); echo '</pre>';
 
