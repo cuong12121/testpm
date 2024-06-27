@@ -84,6 +84,16 @@
 
 		   	return $data;
 		}
+
+		function dataPDF()
+		{
+			$model  = $this -> model;
+
+			$data = $this->returnDataPDF($path);
+
+		    echo'<pre>'; var_dump($data); echo '</pre>';
+
+		}
 		
 		
 		
