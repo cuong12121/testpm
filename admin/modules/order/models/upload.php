@@ -1734,7 +1734,8 @@
             for($j=2;$j<=$heightRow;$j++){
                 
                
-                $row['maVanDon'][] = trim($data[$j]['F']);
+                $row['maVanDon'][$k] = trim($data[$j]['F']);
+                $row['Sku'][$k] = trim($data[$j]['S']);
                 $k++;
 
             }  
