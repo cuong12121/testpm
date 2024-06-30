@@ -172,7 +172,8 @@
 
 			$result = array_diff_assoc($test, $data_pdf);
 
-			print_r($result);
+
+			print_r($data_pdf.'<br>'.$test);
 
 		    die;
 
