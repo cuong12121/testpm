@@ -117,7 +117,7 @@
 
 				foreach ($all_data as $key => $vals) {
 
-					$result['mavandon'][$dem] = $vals['mavandon'];
+					$result['mavandon'][$dem] = $vals['mavandon']$key;
 
 					$result['sku'][$dem] = $vals['sku'];
 					
@@ -125,7 +125,7 @@
 
 			}
 
-			 echo'<pre>'; var_dump($result); echo '</pre>';
+			 echo'<pre>'; var_dump($all_data); echo '</pre>';
 
 			
 		}
