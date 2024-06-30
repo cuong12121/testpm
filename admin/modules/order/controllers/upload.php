@@ -147,7 +147,7 @@
 
 			}
 
-			 echo'<pre>'; var_dump($result); echo '</pre>';
+			return $result;
 
 			
 		}
@@ -172,9 +172,11 @@
 
 		    // var_dump($data_pdf);
 
-		    die;
+			$result = array_diff_assoc($test, $data_pdf);
 
-			// $result = array_diff_assoc($test, $data_pdf);
+			var_dump($result);
+
+			die;
 
 
 			// // print_r($data_pdf);
