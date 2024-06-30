@@ -170,11 +170,11 @@
 
 		    $data_pdf = $this->DataPDF($filePDF);
 
-		    // var_dump($data_pdf);
+		    var_dump($data_pdf);
 
-			$result = array_diff_assoc($test, $data_pdf);
+			// $result = array_diff_assoc($test, $data_pdf);
 
-			var_dump($result);
+			// var_dump($result);
 
 			die;
 
