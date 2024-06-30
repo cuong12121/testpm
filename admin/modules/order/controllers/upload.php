@@ -87,16 +87,30 @@
 
 		function dataPDF()
 		{
-			$model  = $this -> model;
 
-			$file = !empty($_GET['file'])?$_GET['file']:'sp4.pdf';
+			$files  = ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
+
+			$all_data = [];
+
+			$model = $this -> model;
+
+			foreach ($files as $key => $value) {
+				
+				$file  = $value;
 		   
-		    $path = PATH_BASE.'files/'.$file;
+			    $path  = PATH_BASE.'files/'.$file;
+				
+				$data  = $this->returnDataPDF($path);
+
+	
+			    array_push($all_data, $data);
+
+
+			}
+
+			 echo'<pre>'; var_dump($all_data); echo '</pre>';
+
 			
-			$data = $this->returnDataPDF($path);
-
-		    echo'<pre>'; var_dump($data); echo '</pre>';
-
 		}
 		
 		
