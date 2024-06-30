@@ -170,11 +170,13 @@
 
 		    $data_pdf = $this->DataPDF($filePDF);
 
-		    $checkMVD =  array_diff_assoc($data_pdf['mavandon'], $test['maVanDon']);
+		    $checkMVD =  array_diff($data_pdf['mavandon'], $test['maVanDon']);
 
-		    echo "Mã vận đơn pdf: <pre>"; var_dump($data_pdf['mavandon']); echo "</pre>";
+		    print_r($checkMVD);
 
-		    echo "Mã vận đơn excel: <pre>"; var_dump($test['maVanDon']); echo "</pre>";
+		    // echo "Mã vận đơn pdf: <pre>"; var_dump($data_pdf['mavandon']); echo "</pre>";
+
+		    // echo "Mã vận đơn excel: <pre>"; var_dump($test['maVanDon']); echo "</pre>";
 
 
 
