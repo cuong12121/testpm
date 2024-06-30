@@ -94,6 +94,8 @@
 
 			$result = [];
 
+
+
 			$dem = 0;
 
 			$model = $this -> model;
@@ -117,15 +119,35 @@
 
 				foreach ($all_data as $key => $vals) {
 
-					$result['mavandon'][$dem] = $vals['mavandon'];
 
-					$result['sku'][$dem] = $vals['sku'];
+					if(count($vals['mavandon'])>0){
+
+						foreach ($vals['mavandon'] as $key => $value) {
+
+							array_push($result['mavandon'], $value);
+
+						}
+
+					}
+
+					if(count($vals['sku'])>0){
+
+						foreach ($vals['sku'] as $key => $value) {
+
+							array_push($result['sku'], $value);
+
+						}
+
+					}
+
+
+					
 					
 				}
 
 			}
 
-			 echo'<pre>'; var_dump($all_data); echo '</pre>';
+			 echo'<pre>'; var_dump($result); echo '</pre>';
 
 			
 		}
