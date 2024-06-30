@@ -169,7 +169,12 @@
 
 		    echo'<pre>'; var_dump($test); echo '</pre>';
 
-		    die;
+
+		    $filePDF = ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
+
+		    
+
+		    
 
 		    $data = $this->returnDataPDF($path);
 
