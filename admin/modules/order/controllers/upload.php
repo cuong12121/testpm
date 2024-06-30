@@ -168,7 +168,7 @@
 		   
 		    $filePDF = ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
 
-		    $data_pdf = $this->returnDataPDF($filePDF);
+		    $data_pdf = $this->DataPDF($filePDF);
 
 			$result = array_diff_assoc($test, $data_pdf);
 
