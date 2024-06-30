@@ -172,7 +172,7 @@
 
 		    $checkMVD =  array_diff_assoc($data_pdf['mavandon'], $test['maVanDon']);
 
-		    var_dump($checkMVD);
+		    var_dump($data_pdf['mavandon']);
 
 			// $result = array_diff_assoc($test, $data_pdf);
 
