@@ -172,7 +172,11 @@
 
 		    $checkMVD =  array_diff_assoc($data_pdf['mavandon'], $test['maVanDon']);
 
-		    echo "<pre>"; var_dump($data_pdf['mavandon']); echo "</pre>";
+		    echo "Mã vận đơn pdf: <pre>"; var_dump($data_pdf['mavandon']); echo "</pre>";
+
+		    echo "Mã vận đơn excel: <pre>"; var_dump($test['maVanDon']); echo "</pre>";
+
+
 
 			// $result = array_diff_assoc($test, $data_pdf);
 
