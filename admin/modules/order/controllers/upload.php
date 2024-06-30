@@ -117,7 +117,7 @@
 
 				foreach ($all_data as $key => $vals) {
 
-					$result['mavandon'][$dem] = $vals['mavandon']$key;
+					$result['mavandon'][$dem] = $vals['mavandon'];
 
 					$result['sku'][$dem] = $vals['sku'];
 					
