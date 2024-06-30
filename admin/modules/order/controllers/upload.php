@@ -92,6 +92,10 @@
 
 			$all_data = [];
 
+			$result = [];
+
+			$dem = 0;
+
 			$model = $this -> model;
 
 			foreach ($files as $key => $value) {
@@ -101,14 +105,27 @@
 			    $path  = PATH_BASE.'files/'.$file;
 				
 				$data  = $this->returnDataPDF($path);
-
 	
 			    array_push($all_data, $data);
 
 
+
+			}
+			if(count($all_data)){
+
+				$dem++;
+
+				foreach ($all_data as $key => $vals) {
+
+					$result['mavandon'][$dem] = $vals['mavandon'];
+
+					$result['mavandon'][$dem] = $vals['mavandon']
+					
+				}
+
 			}
 
-			 echo'<pre>'; var_dump($all_data); echo '</pre>';
+			 echo'<pre>'; var_dump($result); echo '</pre>';
 
 			
 		}
