@@ -119,7 +119,7 @@
 
 					$result['mavandon'][$dem] = $vals['mavandon'];
 
-					$result['mavandon'][$dem] = $vals['mavandon']
+					$result['sku'][$dem] = $vals['sku'];
 					
 				}
 
