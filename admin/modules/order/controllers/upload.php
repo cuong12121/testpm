@@ -92,7 +92,9 @@
 
 			$all_data = [];
 
-			$result = [];
+			$result['mavandon'] = [];
+
+			$result['sku'] = [];
 
 
 
