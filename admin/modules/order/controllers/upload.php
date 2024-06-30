@@ -174,14 +174,14 @@
 
 		    die;
 
-			$result = array_diff_assoc($test, $data_pdf);
+			// $result = array_diff_assoc($test, $data_pdf);
 
 
-			// print_r($data_pdf);
+			// // print_r($data_pdf);
 
-			// echo'<br>';
+			// // echo'<br>';
 
-			print_r($result);
+			// print_r($result);
 
 		    die;
 
