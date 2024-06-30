@@ -170,9 +170,9 @@
 
 		    $data_pdf = $this->DataPDF($filePDF);
 
-		    // $checkMVD =  array_diff_assoc($data_pdf['mavandon'], $test['mavandon']);
+		    $checkMVD =  array_diff_assoc($data_pdf['mavandon'], $test['maVanDon']);
 
-		    var_dump($test);
+		    var_dump($checkMVD);
 
 			// $result = array_diff_assoc($test, $data_pdf);
 
