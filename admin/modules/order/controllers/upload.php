@@ -85,10 +85,8 @@
 		   	return $data;
 		}
 
-		function dataPDF()
+		function dataPDF($files)
 		{
-
-			$files  = ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
 
 			$all_data = [];
 
@@ -167,18 +165,14 @@
 
 		    $test =  $model->showDataExcel($path);
 
-		    echo'<pre>'; var_dump($test); echo '</pre>';
-
-
+		   
 		    $filePDF = ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
 
-		    
+		    $data_pdf = $this->returnDataPDF($path);
 
-		    
+			$result = array_diff_assoc($test, $data_pdf);
 
-		    $data = $this->returnDataPDF($path);
-
-		    echo'<pre>'; var_dump($data); echo '</pre>';
+			print_r($result);
 
 		    die;
 
