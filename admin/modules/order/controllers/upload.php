@@ -76,7 +76,7 @@
 
 				    $data['mavandon'][$i] = $mvd[0]??'';
 
-				    $data['sku'][$i] = $sku??'';
+				    $data['Sku'][$i] = $sku??'';
 
 		   		}
 
@@ -172,7 +172,23 @@
 
 		    $checkMVD =  array_diff($data_pdf['mavandon'], $test['maVanDon']);
 
-		    print_r($checkMVD);
+		    $checkSku =  array_diff($data_pdf['Sku'], $test['Sku']);
+
+		    if(empty($checkMVD) && empty($checkSku)){
+
+		    	echo "đơn hàng không bị lỗi sku";
+		    }
+		    else{
+		    	if(!empty($checkMVD)){
+		    		echo 'kiểm tra lại các mã vận đơn sau ở file pdf '. implode(',',$checkMVD);
+		    	}
+
+		    	if(!empty($checkSku)){
+		    		echo 'kiểm tra lại sku sau ở file pdf '. implode(',',$checkSku);
+		    	}
+		    }
+
+		  
 
 		    // echo "Mã vận đơn pdf: <pre>"; var_dump($data_pdf['mavandon']); echo "</pre>";
 
