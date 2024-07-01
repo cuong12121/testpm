@@ -92,7 +92,7 @@
 
 			$result['mavandon'] = [];
 
-			$result['sku'] = [];
+			$result['Sku'] = [];
 
 
 
