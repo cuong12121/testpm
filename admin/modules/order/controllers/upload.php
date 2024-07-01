@@ -130,11 +130,11 @@
 
 					}
 
-					if(count($vals['sku'])>0){
+					if(count($vals['Sku'])>0){
 
-						foreach ($vals['sku'] as $key => $value) {
+						foreach ($vals['Sku'] as $key => $value) {
 
-							array_push($result['sku'], $value);
+							array_push($result['Sku'], $value);
 
 						}
 
