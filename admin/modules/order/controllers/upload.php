@@ -130,7 +130,7 @@
 
 					}
 
-					if(count($vals['Sku'])>0){
+					if(!empty($vals['Sku']) && count($vals['Sku'])>0){
 
 						foreach ($vals['Sku'] as $key => $value) {
 
