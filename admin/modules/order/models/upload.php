@@ -1738,6 +1738,13 @@
 
 
                 $row['Sku'][$k] =   $this->convertContentCheck(trim($data[$j]['S']))[0];
+
+                echo "<pre>"; var_dump($row['Sku'][$k]);
+                echo"</pre>";
+
+                die;
+
+
                 $k++;
 
             }  
