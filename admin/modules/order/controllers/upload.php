@@ -173,7 +173,7 @@
 
 		    $test =  $model->showDataExcel($path);
 
-		    echo "<pre>"; var_dump($test['Sku']); echo "</pre>";
+		    // echo "<pre>"; var_dump($test['Sku']); echo "</pre>";
 
 		    die;
 
@@ -201,7 +201,6 @@
 
 		    	if(!empty($checkSku)){
 
-		    	
 		    		echo 'kiểm tra lại sku sau ở file pdf <br>'. implode("<br>",$checkSku). '<br>
 		    		 không giống với file excel';
 		    	}
@@ -236,7 +235,7 @@
 
 				    $data[$i]['mavandon'] = $mvd[0]??'';
 
-				    $data[$i]['sku'] = $sku??'';
+				    $data[$i]['sku'] = $sku[0]??'';
 
 		   		}
 

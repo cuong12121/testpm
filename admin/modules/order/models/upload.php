@@ -1751,9 +1751,11 @@
 
             }  
 
-            $row['Sku'] = $skus;
+            var_dump($skus);
 
-            return($row);  
+            // $row['Sku'] = $skus;
+
+            // return($row);  
         }
 		
 		
