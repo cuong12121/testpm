@@ -1737,13 +1737,9 @@
                 $row['maVanDon'][$k] = trim($data[$j]['F']);
 
 
-                $row['Sku'][$k] =   $this->convertContentCheck(trim($data[$j]['S']))[0];
+                $row['Sku'][$k] =   $this->convertContentCheck(trim($data[$j]['S']));
 
-                echo "<pre>"; var_dump(  ($row['Sku'][$k])[0]);
-                echo"</pre>";
-
-                die;
-
+                $row['Sku'][$k] = ($row['Sku'][$k])[0];
 
                 $k++;
 
