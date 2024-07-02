@@ -170,31 +170,31 @@
 		   
 		    $filePDF = ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
 
-		    $dataPDF = $this->dataPDF($filePDF);
+		    $data_pdf = $this->dataPDF($filePDF);
 
 
-		    // $checkMVD =  array_diff($data_pdf['mavandon'], $test['maVanDon']);
+		    $checkMVD =  array_diff($data_pdf['mavandon'], $test['maVanDon']);
 
-		    // $checkSku =  array_diff($data_pdf['sku'], $test['Sku']);
+		    $checkSku =  array_diff($data_pdf['sku'], $test['Sku']);
 
-		    // if(empty($checkMVD) && empty($checkSku)){
+		    if(empty($checkMVD) && empty($checkSku)){
 
-		    // 	echo "đơn hàng không bị lỗi";
-		    // }
-		    // else{
+		    	echo "đơn hàng không bị lỗi";
+		    }
+		    else{
 
 
-		    // 	echo"đơn hàng có lỗi";
-		    // 	// if(!empty($checkMVD)){
-		    // 	// 	echo 'kiểm tra lại các mã vận đơn sau ở file pdf '. implode(',',$checkMVD);
-		    // 	// }
+		    	echo"đơn hàng có lỗi";
+		    	// if(!empty($checkMVD)){
+		    	// 	echo 'kiểm tra lại các mã vận đơn sau ở file pdf '. implode(',',$checkMVD);
+		    	// }
 
-		    // 	// if(!empty($checkSku)){
-		    // 	// 	echo 'kiểm tra lại sku sau ở file pdf '. implode(',',$checkSku);
-		    // 	// }
-		    // }
+		    	// if(!empty($checkSku)){
+		    	// 	echo 'kiểm tra lại sku sau ở file pdf '. implode(',',$checkSku);
+		    	// }
+		    }
 
-		    var_dump($data_pdf);
+		   
 
 		    die;
 
