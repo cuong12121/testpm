@@ -54,7 +54,7 @@
 		}
 
 
-		function returnDataPDF($path)
+		function DataPDF($path)
 		{
 			$model  = $this -> model;
 
@@ -106,7 +106,7 @@
 		   
 			    $path  = PATH_BASE.'files/'.$file;
 				
-				$data  = $this->returnDataPDF($path);
+				$data  = $this->DataPDF($path);
 	
 			    array_push($all_data, $data);
 
@@ -167,7 +167,7 @@
 
 		    $data_pdf = $this->DataPDF($filePDF);
 
-		      var_dump($data_pdf);
+		     echo'<pre>'; var_dump($data_pdf) echo'</pre>';
 
 		    die;
 
