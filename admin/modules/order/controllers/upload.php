@@ -167,7 +167,7 @@
 
 		    $data_pdf = $this->DataPDF($filePDF);
 
-		     echo'<pre>'; var_dump($data_pdf) echo'</pre>';
+		     echo'<pre>'; var_dump($data_pdf); echo'</pre>';
 
 		    die;
 
