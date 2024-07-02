@@ -178,6 +178,16 @@
 
 		    $data_pdf = $this->dataPDF($filePDF);
 
+		    echo $data_pdf['mavandon'];
+
+		    echo '<br>';
+
+		    echo $test['maVanDon'];
+
+		    die;
+
+
+
 
 		    $checkMVD =  array_diff($data_pdf['mavandon'], $test['maVanDon']);
 
