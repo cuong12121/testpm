@@ -167,13 +167,15 @@
 
 		    $data_pdf = $this->DataPDF($filePDF);
 
+		      var_dump($data_pdf);
+
+		    die;
+
 		    $checkMVD =  array_diff($data_pdf['mavandon'], $test['maVanDon']);
 
 		    $checkSku =  array_diff($data_pdf['Sku'], $test['Sku']);
 
-		    var_dump($data_pdf['Sku']);
-
-		    die;
+		  
 
 		    if(empty($checkMVD) && empty($checkSku)){
 
