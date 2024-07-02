@@ -54,7 +54,7 @@
 		}
 
 
-		function DataPDF($path)
+		function returnDataPDF($path)
 		{
 			$model  = $this -> model;
 
@@ -76,7 +76,7 @@
 
 				    $data['mavandon'][$i] = $mvd[0]??'';
 
-				    $data['Sku'][$i] = $sku??'';
+				    $data['sku'][$i] = $sku??'';
 
 		   		}
 
@@ -92,7 +92,7 @@
 
 			$result['mavandon'] = [];
 
-			$result['Sku'] = [];
+			$result['sku'] = [];
 
 
 
@@ -106,14 +106,14 @@
 		   
 			    $path  = PATH_BASE.'files/'.$file;
 				
-				$data  = $this->DataPDF($path);
+				$data  = $this->returnDataPDF($path);
 	
 			    array_push($all_data, $data);
 
 
 
 			}
-			if(count($all_data)>0){
+			if(count($all_data)){
 
 				$dem++;
 
@@ -130,21 +130,24 @@
 
 					}
 
-					// if(!empty($vals['Sku']) && count($vals['Sku'])>0){
+					if(count($vals['sku'])>0){
 
-					// 	foreach ($vals['Sku'] as $key => $value) {
+						foreach ($vals['sku'] as $key => $value) {
 
-					// 		array_push($result['Sku'], $value);
+							array_push($result['sku'], $value);
 
-					// 	}
+						}
 
-					// }
+					}
+
+
+					
 					
 				}
 
 			}
 
-			return $result;
+			 echo'<pre>'; var_dump($result); echo '</pre>';
 
 			
 		}
@@ -165,52 +168,9 @@
 		   
 		    $filePDF = ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
 
-		    $data_pdf = $this->DataPDF($filePDF);
+		    $dataPDF = $this->dataPDF($filePDF);
 
-		     echo'<pre>'; var_dump($data_pdf); echo'</pre>';
-
-		    die;
-
-		    $checkMVD =  array_diff($data_pdf['mavandon'], $test['maVanDon']);
-
-		    $checkSku =  array_diff($data_pdf['Sku'], $test['Sku']);
-
-		  
-
-		    if(empty($checkMVD) && empty($checkSku)){
-
-		    	echo "đơn hàng không bị lỗi sku";
-		    }
-		    else{
-		    	if(!empty($checkMVD)){
-		    		echo 'kiểm tra lại các mã vận đơn sau ở file pdf '. implode(',',$checkMVD);
-		    	}
-
-		    	if(!empty($checkSku)){
-		    		echo 'kiểm tra lại sku sau ở file pdf '. implode(',',$checkSku);
-		    	}
-		    }
-
-		  
-
-		    // echo "Mã vận đơn pdf: <pre>"; var_dump($data_pdf['mavandon']); echo "</pre>";
-
-		    // echo "Mã vận đơn excel: <pre>"; var_dump($test['maVanDon']); echo "</pre>";
-
-
-
-			// $result = array_diff_assoc($test, $data_pdf);
-
-			// var_dump($result);
-
-			die;
-
-
-			// // print_r($data_pdf);
-
-			// // echo'<br>';
-
-			// print_r($result);
+		    var_dump($dataPDF);
 
 		    die;
 
