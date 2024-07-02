@@ -178,11 +178,11 @@
 
 		    $data_pdf = $this->dataPDF($filePDF);
 
-		    echo $data_pdf['mavandon'];
+		    print_r($data_pdf['mavandon']);
 
 		    echo '<br>';
 
-		    echo $test['maVanDon'];
+		     print_r($test['maVanDon']);
 
 		    die;
 
