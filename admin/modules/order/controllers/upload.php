@@ -127,7 +127,7 @@
 						foreach ($vals['mavandon'] as $key => $value) {
 							$dem++;
 
-							$mvd[$dem] = $value;
+							$mvd[$dem] = $value[0];
 						
 						}
 
@@ -138,7 +138,7 @@
 						foreach ($vals['sku'] as $key => $vals) {
 							$dems ++;
 
-							$sku[$dems] = $vals;
+							$sku[$dems] = $vals[0];
 							
 
 						}
