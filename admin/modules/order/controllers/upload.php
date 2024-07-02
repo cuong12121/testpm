@@ -98,6 +98,8 @@
 
 			$dem = 0;
 
+			$dems =0;
+
 			$model = $this -> model;
 
 			foreach ($files as $key => $value) {
@@ -115,7 +117,7 @@
 			}
 			if(count($all_data)){
 
-				$dem++;
+				
 
 				foreach ($all_data as $key => $vals) {
 
@@ -123,18 +125,21 @@
 					if(count($vals['mavandon'])>0){
 
 						foreach ($vals['mavandon'] as $key => $value) {
+							$dem++;
 
-							array_push($mvd, $value);
-
+							$mvd[$dem] = $value;
+						
 						}
 
 					}
 
 					if(count($vals['sku'])>0){
 
-						foreach ($vals['sku'] as $key => $value) {
+						foreach ($vals['sku'] as $key => $vals) {
+							$dems ++;
 
-							array_push($sku, $value);
+							$sku[$dems] = $vals;
+							
 
 						}
 
