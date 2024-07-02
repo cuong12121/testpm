@@ -1741,6 +1741,12 @@
 
                 $row['Sku'][$k] = ($row['Sku'][$k])[0];
 
+                echo "<pre>"; var_dump(  ($row['Sku'][$k])[0]);
+                echo"</pre>";
+
+                die;
+
+
                 $k++;
 
             }  
