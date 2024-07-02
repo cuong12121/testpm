@@ -1737,7 +1737,7 @@
                 $row['maVanDon'][$k] = trim($data[$j]['F']);
 
 
-                $row['Sku'][$k] =   $this->convertContentCheck(trim($data[$j]['S']));
+                $row['Sku'][$k] =   $this->convertContentCheck(trim($data[$j]['S']))[0];
                 $k++;
 
             }  
