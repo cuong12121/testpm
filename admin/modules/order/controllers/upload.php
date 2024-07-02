@@ -173,6 +173,8 @@
 
 		    var_dump($data_pdf['Sku']);
 
+		    die;
+
 		    if(empty($checkMVD) && empty($checkSku)){
 
 		    	echo "đơn hàng không bị lỗi sku";
