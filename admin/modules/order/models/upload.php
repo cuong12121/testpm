@@ -2702,7 +2702,7 @@
                 // $str_ids = implode(',',$ids);
                 $list = $this->get_records('id IN ('.$str_ids.')','fs_order_uploads');
 
-                 var_dump($list);
+                 var_dump($str_ids);
 
                 die;
                 
