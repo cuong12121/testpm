@@ -173,7 +173,7 @@
 
 		    $test =  $model->showDataExcel($path);
 
-		    var_dump($test['Sku']);
+		    echo "<pre>"; var_dump($test['Sku']); echo "</pre>";
 
 		    die;
 
