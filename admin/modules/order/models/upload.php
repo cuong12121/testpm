@@ -2688,7 +2688,7 @@
                 $str_ids = substr($str_ids,0,-1);
 
 
-                var_dump($str_ids);
+                var_dump($result);
 
                 die;
                 
