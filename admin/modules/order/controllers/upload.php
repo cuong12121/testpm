@@ -177,6 +177,10 @@
 
 		    $checkSku =  array_diff($data_pdf['sku'], $test['Sku']);
 
+		    var_dump($data_pdf['sku']);
+
+		    die;
+
 		    if(empty($checkMVD) && empty($checkSku)){
 
 		    	echo "đơn hàng không bị lỗi";
