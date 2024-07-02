@@ -90,9 +90,9 @@
 
 			$all_data = [];
 
-			$result['mavandon'] = [];
+			$mvd = [];
 
-			$result['sku'] = [];
+			$sku = [];
 
 
 
@@ -124,7 +124,7 @@
 
 						foreach ($vals['mavandon'] as $key => $value) {
 
-							array_push($result['mavandon'], $value);
+							array_push($mvd, $value);
 
 						}
 
@@ -134,18 +134,19 @@
 
 						foreach ($vals['sku'] as $key => $value) {
 
-							array_push($result['sku'], $value);
+							array_push($sku, $value);
 
 						}
 
 					}
-
-
-					
 					
 				}
 
 			}
+
+			$result['mavandon'] = $mvd;
+
+			$result['sku'] = $sku;
 
 			return $result;
 
@@ -177,7 +178,7 @@
 
 		    $checkSku =  array_diff($data_pdf['sku'], $test['Sku']);
 
-		    var_dump($data_pdf['sku']);
+		    echo "<pre>"; var_dump($data_pdf['sku']); echo "</pre>";
 
 		    die;
 
