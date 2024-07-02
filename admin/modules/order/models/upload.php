@@ -1730,6 +1730,8 @@
              $row = array();
 
              $k=0;
+
+             $skus = [];
             //chạy vòng đầu để check lỗi trước
             for($j=2;$j<=$heightRow;$j++){
                 
@@ -1737,19 +1739,19 @@
                 $row['maVanDon'][$k] = trim($data[$j]['F']);
 
 
-                $row['Sku'][$k] =   $this->convertContentCheck(trim($data[$j]['S']));
+                $sku =   $this->convertContentCheck(trim($data[$j]['S']));
 
-                $row['Sku'][$k] = ($row['Sku'][$k])[0];
+                $sku = ($sku)[0];
 
-                echo "<pre>"; var_dump(  ($row['Sku'][$k])[0]);
-                echo"</pre>";
 
-                die;
+                $skus[$k] = $sku;
 
 
                 $k++;
 
             }  
+
+            $row['Sku'] = $skus;
 
             return($row);  
         }
