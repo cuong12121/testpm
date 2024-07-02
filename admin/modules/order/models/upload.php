@@ -1765,7 +1765,7 @@
                 $skuss = ($sku)[0];
 
 
-                $skus[$k] = $skuss[0];
+                $skus[$k] = $skuss;
 
                
                 $k++;
