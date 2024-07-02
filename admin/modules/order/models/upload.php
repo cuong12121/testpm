@@ -1764,8 +1764,10 @@
 
                 $skuss = ($sku)[0];
 
+                var_dump($skuss);
 
-                $skus[$k] = $skuss;
+
+                // $skus[$k] = $skuss[0];
 
                
                 $k++;
