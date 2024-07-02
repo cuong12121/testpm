@@ -181,7 +181,7 @@
 
 		    $checkSku =  array_diff($data_pdf['sku'], $test['Sku']);
 
-		    var_dump($data_pdf['sku']); echo "<br>"; var_dump($test['Sku']);
+		    echo"<pre>"; var_dump($data_pdf['sku']); echo"</pre>"; echo "<br>"; var_dump($test['Sku']);
 
 		    die;
 
