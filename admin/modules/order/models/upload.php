@@ -1746,12 +1746,14 @@
 
                 $skus[$k] = $skuss;
 
+                var_dump($skuss);
 
+                die;
                 $k++;
 
             }  
 
-            var_dump($skus);
+
 
             // $row['Sku'] = $skus;
 

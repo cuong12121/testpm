@@ -200,7 +200,7 @@
 		    	}
 
 		    	if(!empty($checkSku)){
-
+		    		
 		    		echo 'kiểm tra lại sku sau ở file pdf <br>'. implode("<br>",$checkSku). '<br>
 		    		 không giống với file excel';
 		    	}
@@ -235,7 +235,7 @@
 
 				    $data[$i]['mavandon'] = $mvd[0]??'';
 
-				    $data[$i]['sku'] = $sku[0]??'';
+				    $data[$i]['sku'] = $sku??'';
 
 		   		}
 
