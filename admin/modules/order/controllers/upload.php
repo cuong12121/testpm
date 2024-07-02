@@ -144,7 +144,7 @@
 
 			}
 
-			return $result;
+			return count($all_data);
 
 			
 		}
