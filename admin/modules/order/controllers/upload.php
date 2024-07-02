@@ -76,7 +76,7 @@
 
 				    $data['mavandon'][$i] = $mvd[0]??'';
 
-				    $data['sku'][$i] = $sku??'';
+				    $data['sku'][$i] = $sku[0]??'';
 
 		   		}
 
@@ -127,7 +127,7 @@
 						foreach ($vals['mavandon'] as $key => $value) {
 							$dem++;
 
-							$mvd[$dem] = $value[0];
+							$mvd[$dem] = $value;
 						
 						}
 
@@ -138,7 +138,7 @@
 						foreach ($vals['sku'] as $key => $vals) {
 							$dems ++;
 
-							$sku[$dems] = $vals[0];
+							$sku[$dems] = $vals;
 							
 
 						}
