@@ -147,7 +147,9 @@
 
 			}
 
-			 echo'<pre>'; var_dump($result); echo '</pre>';
+			return $result;
+
+			 // echo'<pre>'; var_dump($result); echo '</pre>';
 
 			
 		}
