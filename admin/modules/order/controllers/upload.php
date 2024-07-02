@@ -191,14 +191,14 @@
 		    	if(!empty($checkMVD)){
 
 		    		// print_r($checkMVD);
-		    		echo 'kiểm tra lại các mã vận đơn sau ở file pdf '. implode("<br>",$checkMVD). '
+		    		echo 'kiểm tra lại các mã vận đơn sau ở file pdf <br>'. implode("<br>",$checkMVD). '
 		    		 không giống với file excel';
 		    	}
 
 		    	if(!empty($checkSku)){
 
 		    	
-		    		echo 'kiểm tra lại sku sau ở file pdf '. implode("<br>",$checkSku). '
+		    		echo 'kiểm tra lại sku sau ở file pdf <br>'. implode("<br>",$checkSku). '
 		    		 không giống với file excel';
 		    	}
 		    }
