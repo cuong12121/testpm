@@ -472,6 +472,27 @@
         
         }
 
+         function convertContentCheckExcel($content){
+
+            // if(empty($b[0])){
+            //  preg_match_all('/[A-Z-0-9]{1}[A-Za-z0-9]{1}[A-Za-z0-9]{1}[A-Za-z0-9]{1}+\s*-\s*[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]+-[A-Za-z0-9]+[[0-9]{1,2}|0]/', $content, $b);
+            // }
+
+            
+            if(empty($b[0])){
+                preg_match_all('/[A-Z-0-9]{1}[A-Za-z0-9]{1}[A-Za-z0-9]{1}[A-Za-z0-9]{1}+\s*-\s*[A-Za-z0-9][A-Za-z0-9]+-+\s[A-Za-z0-9][A-Za-z0-9]+\s*-\s*[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]+\s*-\s*[A-Za-z0-9][A-Za-z0-9]+\s*-\s*[A-Za-z0-9][A-Za-z0-9][0-9]/', $content, $b);
+            }
+
+            // if(empty($b[0])){
+            //     preg_match_all('/[A-Z-0-9]{1}[A-Za-z0-9]{1}[A-Za-z0-9]{1}[A-Za-z0-9]{1}+\s*-\s*[A-Za-z0-9][A-Za-z0-9]+\s*-\s*[A-Za-z0-9][A-Za-z0-9]+\s*-\s*[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]+\s*-\s*[A-Za-z0-9][A-Za-z0-9]+\s*-\s*[[0-9]{1,2}|0]/', $content, $b);
+            // }
+         
+
+
+            return $b;
+
+        }   
+
 
         function convertContentCheck($content){
 
@@ -1739,7 +1760,7 @@
                 $row['maVanDon'][$k] = trim($data[$j]['F']);
 
 
-                $sku =   $this->convertContentCheck(trim($data[$j]['S']));
+                $sku =   $this->convertContentCheckExcel(trim($data[$j]['S']));
 
                 $skuss = ($sku)[0];
 
