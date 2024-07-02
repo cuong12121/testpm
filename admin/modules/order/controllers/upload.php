@@ -173,7 +173,9 @@
 
 		    $test =  $model->showDataExcel($path);
 
-		    var_dump($test);
+		    var_dump($test['Sku']);
+
+		    die;
 
 		   
 		    $filePDF = ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
