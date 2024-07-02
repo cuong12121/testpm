@@ -1744,20 +1744,18 @@
                 $skuss = ($sku)[0];
 
 
-                $skus[$k] = $skuss;
+                $skus[$k] = $skuss[0];
 
-                var_dump($skuss);
-
-                die;
+               
                 $k++;
 
             }  
 
 
 
-            // $row['Sku'] = $skus;
+            $row['Sku'] = $skus;
 
-            // return($row);  
+            return($row);  
         }
 		
 		
