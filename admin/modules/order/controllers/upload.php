@@ -172,11 +172,6 @@
 		    $path = PATH_BASE.'files/'.$file;
 
 		    $test =  $model->showDataExcel($path);
-
-		    echo "<pre>"; var_dump($test['Sku']); echo "</pre>";
-
-		    die;
-
 		   
 		    $filePDF = ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
 
@@ -200,7 +195,7 @@
 		    	}
 
 		    	if(!empty($checkSku)){
-		    		
+
 		    		echo 'kiểm tra lại sku sau ở file pdf <br>'. implode("<br>",$checkSku). '<br>
 		    		 không giống với file excel';
 		    	}
