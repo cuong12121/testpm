@@ -194,7 +194,7 @@
 		    // 	// }
 		    // }
 
-		    var_dump($data_pdf['mavandon']);
+		    var_dump($data_pdf);
 
 		    die;
 
