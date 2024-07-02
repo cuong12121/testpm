@@ -113,7 +113,7 @@
 
 
 			}
-			if(count($all_data)){
+			if(count($all_data)>0){
 
 				$dem++;
 
