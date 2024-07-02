@@ -1741,10 +1741,10 @@
 
                 $sku =   $this->convertContentCheck(trim($data[$j]['S']));
 
-                $sku = ($sku)[0];
+                $skuss = ($sku)[0];
 
 
-                $skus[$k] = $sku;
+                $skus[$k] = $skuss;
 
 
                 $k++;
