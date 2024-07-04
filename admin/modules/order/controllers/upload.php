@@ -532,10 +532,7 @@
 		
 			$rows = $model->prints(1);
 			
-			die;
-			
-			
-			
+
 			$link = 'index.php?module='.$this -> module.'&view='.$this -> view;
 			$page = FSInput::get('page',0);
 			if($page > 1){

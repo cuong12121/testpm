@@ -2702,18 +2702,18 @@
                 }
 
                 $link = FSRoute::_('index.php?module='.$this -> module.'&view='.$this -> view);
-                if(!isset($_SESSION[$this -> prefix.'text0']) || $_SESSION[$this -> prefix.'text0'] == '' || !isset($_SESSION[$this -> prefix.'text1']) || $_SESSION[$this -> prefix.'text1'] == '' || !isset($_SESSION[$this -> prefix.'filter0']) || $_SESSION[$this -> prefix.'filter0'] == 0 || !isset($_SESSION[$this -> prefix.'filter1']) || $_SESSION[$this -> prefix.'filter1'] == 0 || !isset($_SESSION[$this -> prefix.'filter2']) || $_SESSION[$this -> prefix.'filter2'] == 0 ){
-                    setRedirect($link,FSText :: _('Vui lòng chọn lọc khung ngày, giờ, kho, sàn trước khi in!'),'error');
-                }
+                // if(!isset($_SESSION[$this -> prefix.'text0']) || $_SESSION[$this -> prefix.'text0'] == '' || !isset($_SESSION[$this -> prefix.'text1']) || $_SESSION[$this -> prefix.'text1'] == '' || !isset($_SESSION[$this -> prefix.'filter0']) || $_SESSION[$this -> prefix.'filter0'] == 0 || !isset($_SESSION[$this -> prefix.'filter1']) || $_SESSION[$this -> prefix.'filter1'] == 0 || !isset($_SESSION[$this -> prefix.'filter2']) || $_SESSION[$this -> prefix.'filter2'] == 0 ){
+                //     setRedirect($link,FSText :: _('Vui lòng chọn lọc khung ngày, giờ, kho, sàn trước khi in!'),'error');
+                // }
 
-                $time = 18; $filter1 = 1;
-
-
-                var_dump($_SESSION[$this -> prefix.'text0']);
+                // $time = 18; $filter1 = 1;
 
 
+                // var_dump($_SESSION[$this -> prefix.'text0']);
 
-                die;
+
+
+                // die;
                 $str_ids = '215518, 215519';
 
 
@@ -2941,16 +2941,16 @@
                 $row2['total_file'] = count($get_list_page_pdf);
                 $row2['total_file_success'] = $i;
                 $row2['created_time'] = date('Y-m-d H:i:s');
-                $row2['action_username'] = $_SESSION ['ad_username'];
-                $row2['action_userid'] = $_SESSION ['ad_userid'];
+                $row2['action_username'] = 'admin';
+                $row2['action_userid'] = 9;
                 $row2['file_pdf'] = $path_pdf_merge_soft.$name_pdf.'.pdf';
 
-                $row2['house_id'] = $_SESSION[$this -> prefix.'filter0'];
-                $row2['warehouse_id'] = $_SESSION[$this -> prefix.'filter1'];
-                $row2['platform_id'] = $_SESSION[$this -> prefix.'filter2'];
+                $row2['house_id'] = 10;
+                $row2['warehouse_id'] = 2;
+                $row2['platform_id'] = 1;
 
-                $row2['date_select_from'] = date('Y-m-d',strtotime($_SESSION[$this -> prefix.'text0']));
-                $row2['date_select_to'] = date('Y-m-d',strtotime($_SESSION[$this -> prefix.'text1']));
+                $row2['date_select_from'] = date('Y-m-d',strtotime('22-05-2024');
+                $row2['date_select_to'] = date('Y-m-d',strtotime('22-05-2024');
                 $this->_add($row2,'fs_order_uploads_history_prints');
                 return $i;
             }
