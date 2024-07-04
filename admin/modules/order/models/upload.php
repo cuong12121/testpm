@@ -2704,7 +2704,7 @@
 
 
                 // $str_ids = implode(',',$ids);
-                // $list = $this->get_records('id IN ('.$str_ids.')','fs_order_uploads');
+                $list = $this->get_records('id IN ('.$str_ids.')','fs_order_uploads');
 
                 // echo '<pre>';var_dump($list); echo '</pre>';
 
