@@ -2677,6 +2677,10 @@
             global $db;
             //$ids = FSInput::get('id',array(),'array');
             $query = $this->setQuery();
+
+            var_dump($query);
+
+            die;
             $sql = $db->query ( $query );
             $result = $db->getObjectList ();
             
@@ -2700,9 +2704,12 @@
                     setRedirect($link,FSText :: _('Vui lòng chọn lọc khung ngày, giờ, kho, sàn trước khi in!'),'error');
                 }
 
+                $time = 18; $filter1 = 1;
+
+
                 var_dump($_SESSION[$this -> prefix.'text0']);
 
-                
+
 
                 die;
                 $str_ids = '215518, 215519';
