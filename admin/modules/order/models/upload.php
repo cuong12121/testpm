@@ -2682,7 +2682,7 @@
             
             if(!empty($result)){
 
-               
+
                 $str_ids ="";
                 foreach ($result as $result_it) {
                     $str_ids .= $result_it-> id.',';
@@ -2701,8 +2701,14 @@
                 }
                 $str_ids = '215518, 215519';
 
+
+
                 // $str_ids = implode(',',$ids);
                 $list = $this->get_records('id IN ('.$str_ids.')','fs_order_uploads');
+
+                echo '<pre>';var_dump($list); echo '</pre>';
+
+                die;
 
                 
                 
