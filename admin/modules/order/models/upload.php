@@ -2676,7 +2676,7 @@
         {
             global $db;
             //$ids = FSInput::get('id',array(),'array');
-            $query =  "SELECT * FROM fs_order_uploads AS a WHERE 1=1 AND warehouse_id = 1 AND house_id = 13 AND platform_id = 2 AND date = '2024-05-22'  ORDER BY created_time DESC , id DESC ";
+            $query =  "SELECT * FROM fs_order_uploads AS a WHERE 1=1 AND warehouse_id = 1 AND house_id = 13 AND platform_id = 2 AND date = '2024-04-24'  ORDER BY created_time DESC , id DESC ";
 
 
             $sql = $db->query ($query);
