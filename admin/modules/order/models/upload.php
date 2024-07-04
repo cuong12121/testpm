@@ -2946,8 +2946,8 @@
                 $row2['warehouse_id'] = 2;
                 $row2['platform_id'] = 1;
 
-                $row2['date_select_from'] = date('Y-m-d',strtotime('22-05-2024');
-                $row2['date_select_to'] = date('Y-m-d',strtotime('22-05-2024');
+                $row2['date_select_from'] = date('Y-m-d',strtotime('22-05-2024'));
+                $row2['date_select_to'] = date('Y-m-d',strtotime('22-05-2024'));
                 $this->_add($row2,'fs_order_uploads_history_prints');
                 return $i;
             }
