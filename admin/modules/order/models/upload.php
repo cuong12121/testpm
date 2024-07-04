@@ -2675,12 +2675,43 @@
 		function prints($value)
         {
             global $db;
-            //$ids = FSInput::get('id',array(),'array');
-            $query =  "SELECT * FROM fs_order_uploads AS a WHERE 1=1 AND warehouse_id = 1 AND house_id = 13 AND platform_id = 2 AND date = '2024-04-24'  ORDER BY created_time DESC , id DESC";
 
+            $plarform = [1,2,3,4,6,8,9,10,11];
+
+
+            // chạy đơn lúc 7h10
+
+            $house_id = 13;
+
+            $plarforms = 2
+
+            $query =  "SELECT id FROM fs_order_uploads AS a WHERE 1=1 AND warehouse_id = 1 AND house_id = ".$house_id." AND platform_id = ".$plarforms." AND date = '2024-04-24'  ORDER BY created_time DESC , id DESC";
 
             $sql = $db->query ($query);
-            $result = $db->getObjectList ();
+            $result = $db->resultArray ();
+
+            var_dump($result);
+
+            die;
+
+
+            // for ($i=1; $i < 3; $i++) { 
+            //     foreach ($plarform as $plarforms) {
+
+            //         $query =  "SELECT id FROM fs_order_uploads AS a WHERE 1=1 AND warehouse_id = 1 AND house_id = ".$house_id." AND platform_id = ".$plarforms." AND date = '2024-04-24'  ORDER BY created_time DESC , id DESC";
+
+            //         $sql = $db->query ($query);
+            //         $result = $db->resultArray ();
+
+
+            //     }
+            // }
+            // //$ids = FSInput::get('id',array(),'array');
+            
+
+
+          
+            // $array = 
 
           
             if(!empty($result)){
@@ -2690,6 +2721,8 @@
                 }
 
             }
+
+
 
             
          
