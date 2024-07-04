@@ -2688,7 +2688,7 @@
             $query =  "SELECT id FROM fs_order_uploads AS a WHERE 1=1 AND warehouse_id = 1 AND house_id = ".$house_id." AND platform_id = ".$plarforms." AND date = '2024-04-24'  ORDER BY created_time DESC , id DESC";
 
             $sql = $db->query ($query);
-            $result = $db->resultArray ();
+            $result = $db->getObjectList ();
 
             var_dump($result);
 
