@@ -2682,9 +2682,7 @@
             
             if(!empty($result)){
 
-                var_dump(1);
-
-                die;
+               
                 $str_ids ="";
                 foreach ($result as $result_it) {
                     $str_ids .= $result_it-> id.',';
