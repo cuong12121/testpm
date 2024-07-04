@@ -2690,7 +2690,21 @@
             $sql = $db->query ($query);
             $result = $db->getObjectList ();
 
-            var_dump($result);
+            $list_Ar = [];
+
+            if(!empty($result)){
+
+                foreach ($result as $key => $value) {
+               
+                    array_push($list_Ar, $value->id);
+                }
+
+            } 
+
+            $list_ar_str = implode(',', $list_Ar);
+
+           
+            var_dump($list_ar_str);
 
             die;
 
