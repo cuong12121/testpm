@@ -2678,11 +2678,13 @@
             //$ids = FSInput::get('id',array(),'array');
             $query = $this->setQuery();
 
-            var_dump($query);
 
-            die;
             $sql = $db->query ( $query );
             $result = $db->getObjectList ();
+
+            var_dump($result);
+
+            die;
             
             if(!empty($result)){
 
