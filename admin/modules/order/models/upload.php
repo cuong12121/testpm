@@ -2679,11 +2679,16 @@
             $query = $this->setQuery();
 
 
-            $sql = $db->query ( $query );
+            $sql = $db->query ($query);
             $result = $db->getObjectList ();
 
+            var_dump($query);
+
+            die;
          
             if(!empty($result)){
+
+
 
 
                 // $str_ids ="";
@@ -2705,10 +2710,7 @@
 
                 // $time = 18; $filter1 = 1;
 
-
                 // var_dump($_SESSION[$this -> prefix.'text0']);
-
-
 
                 // die;
                 $str_ids = '215518, 215519';
