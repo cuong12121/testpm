@@ -2682,18 +2682,15 @@
             $sql = $db->query ( $query );
             $result = $db->getObjectList ();
 
-            var_dump($result);
-
-            die;
-            
+         
             if(!empty($result)){
 
 
-                $str_ids ="";
-                foreach ($result as $result_it) {
-                    $str_ids .= $result_it-> id.',';
-                }
-                $str_ids = substr($str_ids,0,-1);
+                // $str_ids ="";
+                // foreach ($result as $result_it) {
+                //     $str_ids .= $result_it-> id.',';
+                // }
+                // $str_ids = substr($str_ids,0,-1);
                 
                 $link = 'index.php?module='.$this -> module.'&view='.$this -> view;
                 $page = FSInput::get('page',0);
