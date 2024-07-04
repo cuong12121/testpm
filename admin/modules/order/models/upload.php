@@ -2704,14 +2704,12 @@
 
 
                 // $str_ids = implode(',',$ids);
-                $list = $this->get_records('id IN ('.$str_ids.')','fs_order_uploads');
+                // $list = $this->get_records('id IN ('.$str_ids.')','fs_order_uploads');
 
-                echo '<pre>';var_dump($list); echo '</pre>';
+                // echo '<pre>';var_dump($list); echo '</pre>';
 
-                die;
+                // die;
 
-                
-                
                 //kiểm tra các file pdf với excel có tồn tại hay không
                 foreach ($list as $item){
                     if(!$item-> file_pdf || !$item-> file_xlsx){
