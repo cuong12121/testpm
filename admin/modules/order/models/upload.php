@@ -2681,6 +2681,10 @@
             $result = $db->getObjectList ();
             
             if(!empty($result)){
+
+                var_dump(1);
+
+                die;
                 $str_ids ="";
                 foreach ($result as $result_it) {
                     $str_ids .= $result_it-> id.',';
@@ -2702,9 +2706,7 @@
                 // $str_ids = implode(',',$ids);
                 $list = $this->get_records('id IN ('.$str_ids.')','fs_order_uploads');
 
-                var_dump($list);
-
-                die;
+                
                 
                 //kiểm tra các file pdf với excel có tồn tại hay không
                 foreach ($list as $item){
