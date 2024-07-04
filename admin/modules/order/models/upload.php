@@ -2686,7 +2686,7 @@
             if(!empty($result)){
                 foreach ($result as $key => $value) {
                
-                    echo $value->id;
+                    echo $value->id.'<br>';
                 }
 
             }
