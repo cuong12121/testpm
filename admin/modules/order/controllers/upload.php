@@ -234,6 +234,7 @@
 			$data = [];
 
 			if($number_page>0){
+				echo 1;
 				for ($i=1; $i<=$number_page; $i++) {
 					
 					$data_convert = $model->convertContentLazada($datas);
