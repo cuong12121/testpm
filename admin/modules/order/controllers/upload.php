@@ -241,6 +241,10 @@
 				
 				$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
+				echo $datas;
+
+				die;
+
 				// thay thế ký tự xuống dòng bằng chuỗi rỗng
 
 				$datas =  preg_replace("/\r?\n/", '', $datas);
