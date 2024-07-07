@@ -230,7 +230,7 @@
 
 			$data_convert = $model->convertContentLazada($datas);
 
-		    print_r($datas);
+		    // print_r($datas);
 
 		    $pattern = "/\d{10}VNA/";
 
