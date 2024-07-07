@@ -224,7 +224,7 @@
 
 			$data_convert = $model->convertContentLazada($datas);
 
-		    print_r($data_convert);
+		    print_r($datas);
 
 		    die;
 		    
