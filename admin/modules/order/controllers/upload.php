@@ -230,7 +230,7 @@
 
 			echo $number_page;
 
-			
+
 			$data = [];
 
 			if($number_page>0){
@@ -238,7 +238,7 @@
 					
 					$data_convert = $model->convertContentLazada($datas);
 
-					$datas = shell_exec('pdftotext  -raw -f'.$i.' -l '.$i.' '.$filePath.' -');
+					$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
 				    // print_r($datas);
 
