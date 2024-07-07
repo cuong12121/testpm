@@ -216,19 +216,13 @@
 		{
 			$model  = $this -> model;
 
-			$file = "la6.pdf";
+			$file = "la2.pdf";
 
 			$filePath =  $path = PATH_BASE.'files/'.$file;
 
 			$datas = shell_exec('pdftotext  -raw -f 1 -l 1 '.$filePath.' -');
 
-			print_r($datas);
-
-			die;
-
 			$data_convert = $model->convertContentLazada($datas);
-
-		
 
 		    print_r($data_convert);
 
