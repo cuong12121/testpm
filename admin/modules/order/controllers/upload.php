@@ -222,6 +222,10 @@
 
 			$datas = shell_exec('pdftotext  -raw -f 1 -l 1 '.$filePath.' -');
 
+			print_r($datas);
+
+			die;
+
 			$data_convert = $model->convertContentLazada($datas);
 
 		
