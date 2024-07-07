@@ -240,7 +240,9 @@
 
 					$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
-				    // print_r($datas);
+				    print_r($datas);
+
+				    die;
 
 				    $pattern = "/\d{10}VNA/";
 
