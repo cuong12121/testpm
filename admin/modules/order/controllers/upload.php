@@ -245,10 +245,19 @@
 
 				$datas =  preg_replace("/\r?\n/", '', $datas);
 
+				$mau_regex = '/(.*?)Người nhậ:/s'; // s cho phép . khớp với cả newline
+
+				if (preg_match($mau_regex, $datas, $matches)) {
+
+					$data[$i]['mavandon'] = $matches[1];
+				   
+				} 
+
 				$data_convert = $model->convertContentbest($datas);
 
-				array_push($data, $datas);
+				$data[$i]['sku'] =  $data_convert[0];
 
+			
 			}
 
 			return $data;
