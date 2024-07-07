@@ -248,7 +248,7 @@
 
 				die;
 
-				$mau_regex = '/(.*?)Người nhận/s'; // s cho phép . khớp với cả newline
+				$mau_regex = '/(.*?)Mã khách hàng/s'; // s cho phép . khớp với cả newline
 
 				if (preg_match($mau_regex, $datas, $matches)) {
 
@@ -256,7 +256,7 @@
 				   
 				} 
 
-				$data_convert = $model->convertContenttiktok($datas);
+				$data_convert = $model->convertContentviettel($datas);
 
 				$data[$i]['sku'] =  $data_convert[0];
 
