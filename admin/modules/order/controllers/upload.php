@@ -211,9 +211,19 @@
             }    
 
 		}
-		
-		
-		
+
+		function testOutPdf()
+		{
+			$model  = $this -> model;
+
+			$files = "la8.pdf";
+
+			$filePath =  $path = PATH_BASE.'files/'.$file;
+
+			$datas = shell_exec('pdftotext  -raw -f 1 -l 1 '.$filePath.' - | cat');
+
+			$data_convert = $model->convertContentLazada($filePath);
+		}
 		
 		function test(){
 
