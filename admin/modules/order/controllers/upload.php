@@ -241,15 +241,15 @@
 				
 				$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
-				echo $datas;
+				// echo $datas;
 
-				die;
+				// die;
 
-				// thay thế ký tự xuống dòng bằng chuỗi rỗng
+				// // thay thế ký tự xuống dòng bằng chuỗi rỗng
 
 				$datas =  preg_replace("/\r?\n/", '', $datas);
 
-				$mau_regex = '/(.*?)Người nhậ:/s'; // s cho phép . khớp với cả newline
+				$mau_regex = '/(.*?)Người nhận/s'; // s cho phép . khớp với cả newline
 
 				if (preg_match($mau_regex, $datas, $matches)) {
 
