@@ -222,6 +222,55 @@
 			
 		}
 
+
+		function dataPDFTiktok()
+		{
+			$model  = $this -> model;
+
+			$file = "tiktok1.pdf";
+
+			$filePath =  $path = PATH_BASE.'files/'.$file;
+
+			$number_page = shell_exec('pdftk '.$filePath.' dump_data | grep NumberOfPages');
+
+			$number_page = str_replace('NumberOfPages:', '', $number_page);
+
+			$data = [];
+
+			for ($i=0; $i < intval($number_page); $i++) { 
+				
+				$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
+
+				echo $datas;
+
+				die;
+
+				// echo $datas;
+
+				// die;
+
+				// // thay thế ký tự xuống dòng bằng chuỗi rỗng
+
+				$datas =  preg_replace("/\r?\n/", '', $datas);
+
+				$mau_regex = '/(.*?)Người nhận/s'; // s cho phép . khớp với cả newline
+
+				if (preg_match($mau_regex, $datas, $matches)) {
+
+					$data[$i]['mavandon'] = $matches[1];
+				   
+				} 
+
+				$data_convert = $model->convertContentbest($datas);
+
+				$data[$i]['sku'] =  $data_convert[0];
+
+			
+			}
+			return $data;
+			
+		}
+
 		function dataPDFBest()
 		{
 
