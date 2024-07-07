@@ -216,21 +216,17 @@
 		{
 			$model  = $this -> model;
 
-			$file = "la8.pdf";
+			$file = "la7.pdf";
 
 			$filePath =  $path = PATH_BASE.'files/'.$file;
 
-			// $datas = shell_exec('pdftotext  -raw -f 1 -l 1 '.$filePath.' - | cat');
+			$datas = shell_exec('pdftotext  -raw -f 1 -l 1 '.$filePath.' - | cat');
 
-			// $data_convert = $model->convertContentLazada($filePath);
+			$data_convert = $model->convertContentLazada($filePath);
 
-			$parser = new \Smalot\PdfParser\Parser();
-			
-        	$pdf = $parser->parseFile($filePath);
-        	
-        	$text = $pdf->getText();
+		
 
-		    print_r($text);
+		    print_r($data_convert);
 
 		    die;
 		    
