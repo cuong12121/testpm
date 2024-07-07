@@ -243,7 +243,7 @@
 
 				$data_convert = $model->convertContentLazada($datas);
 
-				array_push($data, $data_convert);
+				array_push($data, $datas);
 			}
 
 			
