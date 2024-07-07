@@ -237,7 +237,14 @@
 			// Kiểm tra và lấy chuỗi phù hợp
 			if (preg_match($pattern, $datas, $matches)) {
 			    // In chuỗi phù hợp
-			    echo "Chuỗi phù hợp: " . $matches[0];
+			  
+			    $result = strstr($datas, $matches[0]);
+
+			    if($result !== false){
+
+			    	echo $result;
+
+			    }
 			}
 
 		    die;
