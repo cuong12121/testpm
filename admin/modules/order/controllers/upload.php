@@ -237,9 +237,10 @@
 				
 				for ($i=1; $i<=$number_page; $i++) {
 					
-					$data_convert = $model->convertContentLazada($datas);
 
 					$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
+
+					$data_convert = $model->convertContentLazada($datas);
 
 				    $pattern = "/\d{10}VNA/";
 
@@ -260,7 +261,7 @@
 
 						    $data[$i]['mavandon'] = $results;
 
-						     $data[$i]['sku'] = $data_convert[0];
+						     $data[$i]['sku'] = @$data_convert[0][0];
 
 						    // array_push($data, $results);
 						}
