@@ -213,12 +213,38 @@
 		}
 
 
-		function FunctionName($value='')
+		function testOutPdf()
 		{
+			
+			$print = $this->dataPDFBest();
+
+			print_r($print);
 			
 		}
 
-		function testOutPdf()
+		function dataPDFBest()
+		{
+
+			$model  = $this -> model;
+
+			$file = "best1.pdf";
+
+			$filePath =  $path = PATH_BASE.'files/'.$file;
+
+			$number_page = shell_exec('pdftk '.$filePath.' dump_data | grep NumberOfPages');
+
+			$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
+
+			$data_convert = $model->convertContentLazada($datas);
+
+			return $datas;
+
+
+		}
+
+		//lấy thông số file pdf lazada
+
+		function dataPDFLazada()
 		{
 			$model  = $this -> model;
 
@@ -270,16 +296,6 @@
 				}
 
 			}
-
-			print_r($data);
-
-			
-			
-		    die;
-		    
-		   print_r($model->convertContentLazada($content[0]));
-
-			print_r($datas);
 		}
 		
 		function test(){
