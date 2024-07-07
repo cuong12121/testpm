@@ -249,7 +249,7 @@
 
 				array_push($data, $datas);
 
-			
+			}
 
 			return $data;
 
