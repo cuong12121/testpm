@@ -220,7 +220,7 @@
 
 			$filePath =  $path = PATH_BASE.'files/'.$file;
 
-			$datas = shell_exec('pdftotext -f 1 -l 1 '.$filePath.' -');
+			$datas = shell_exec('pdftotext  -raw -f 1 -l 1 '.$filePath.' -');
 
 			$data_convert = $model->convertContentLazada($filePath);
 
