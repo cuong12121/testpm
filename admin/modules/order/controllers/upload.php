@@ -241,6 +241,8 @@
 				
 				$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
+				$datas =  preg_replace("/\r?\n/", '', $datas);
+
 				$data_convert = $model->convertContentbest($datas);
 
 				array_push($data, $datas);
