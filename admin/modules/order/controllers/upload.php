@@ -233,11 +233,22 @@
 
 			$number_page = shell_exec('pdftk '.$filePath.' dump_data | grep NumberOfPages');
 
-			$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
+			$number_page = str_replace('NumberOfPages:', '', $number_page);
 
-			$data_convert = $model->convertContentLazada($datas);
+			$data = [];
 
-			return $datas;
+			for ($i=0; $i < intval($number_page); $i++) { 
+				
+				$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
+
+				$data_convert = $model->convertContentLazada($datas);
+
+				array_push($data, $data_convert);
+			}
+
+			
+
+			return $data;
 
 
 		}
