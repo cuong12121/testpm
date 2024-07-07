@@ -222,7 +222,7 @@
 
 			$datas = shell_exec('pdftotext  -raw -f 1 -l 1 '.$filePath.' -');
 
-			$data_convert = $model->convertContentLazada($filePath);
+			$data_convert = $model->convertContentLazada($datas);
 
 		
 
