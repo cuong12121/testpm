@@ -212,6 +212,12 @@
 
 		}
 
+
+		function FunctionName($value='')
+		{
+			
+		}
+
 		function testOutPdf()
 		{
 			$model  = $this -> model;
@@ -225,6 +231,14 @@
 			$data_convert = $model->convertContentLazada($datas);
 
 		    print_r($datas);
+
+		    $pattern = "/\d{10}VNA/";
+
+			// Kiểm tra và lấy chuỗi phù hợp
+			if (preg_match($pattern, $data_convert, $matches)) {
+			    // In chuỗi phù hợp
+			    echo "Chuỗi phù hợp: " . $matches[0];
+			}
 
 		    die;
 		    
