@@ -226,29 +226,48 @@
 
 			$filePath =  $path = PATH_BASE.'files/'.$file;
 
-			$datas = shell_exec('pdftotext  -raw -f 1 -l 1 '.$filePath.' -');
+			$number_page = shell_exec('pdftk '.$filePath.' dump_data | grep NumberOfPages');
 
-			$data_convert = $model->convertContentLazada($datas);
+			$data = [];
 
-		    // print_r($datas);
+			if($number_page>0){
+				for ($i=1; $i<=$number_page; $i++) {
+					
+					$data_convert = $model->convertContentLazada($datas);
 
-		    $pattern = "/\d{10}VNA/";
+					$datas = shell_exec('pdftotext  -raw -f'.$i.' -l '.$i.' '.$filePath.' -');
 
-			// Kiểm tra và lấy chuỗi phù hợp
-			if (preg_match($pattern, $datas, $matches)) {
-			    // In chuỗi phù hợp
+				    // print_r($datas);
 
-			    $known = $matches[0];
-			  
-			   	$pattern = "/(.*?)" . preg_quote($known) . "/";
+				    $pattern = "/\d{10}VNA/";
 
-				// Kiểm tra và lấy phần chuỗi trước chuỗi đã biết
-				if (preg_match($pattern, $datas, $matchess)) {
-				    // In phần chuỗi phù hợp
-				    echo "Phần chuỗi trước '$known' là: " . $matchess[1];
+					// Kiểm tra và lấy chuỗi phù hợp
+					if (preg_match($pattern, $datas, $matches)) {
+					    // In chuỗi phù hợp
+
+					    $known = $matches[0];
+					  
+					   	$pattern = "/(.*?)" . preg_quote($known) . "/";
+
+						// Kiểm tra và lấy phần chuỗi trước chuỗi đã biết
+						if (preg_match($pattern, $datas, $matchess)) {
+						    // In phần chuỗi phù hợp
+						    echo "Phần chuỗi trước '$known' là: " . $matchess[1];
+
+						    $results = $matchess[1].$known;
+
+						    array_push($data, $results);
+						}
+					}
+
 				}
+
+				
 			}
 
+			print_r($data);
+
+			
 		    die;
 		    
 		   print_r($model->convertContentLazada($content[0]));
