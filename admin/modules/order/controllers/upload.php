@@ -247,7 +247,7 @@
 
 				$data_convert = $model->convertContentbest($datas);
 
-				array_push($data, $datas)
+				array_push($data, $datas);
 
 			
 
