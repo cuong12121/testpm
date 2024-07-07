@@ -224,9 +224,13 @@
 
 			// $data_convert = $model->convertContentLazada($filePath);
 
-			 $content = $model->textpdfs($filePath);
+			$parser = new \Smalot\PdfParser\Parser();
+			
+        	$pdf = $parser->parseFile($filePath);
+        	
+        	$text = $pdf->getText();
 
-		    print_r($filePath);
+		    print_r($text);
 
 		    die;
 		    
