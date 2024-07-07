@@ -233,17 +233,15 @@
 
 			$data = [];
 
-			if($number_page>0){
-				echo 1;
+			if( intval($number_page)>0){
+				
 				for ($i=1; $i<=$number_page; $i++) {
 					
 					$data_convert = $model->convertContentLazada($datas);
 
 					$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
-				    print_r($datas);
-
-				    die;
+				    
 
 				    $pattern = "/\d{10}VNA/";
 
@@ -255,7 +253,7 @@
 					  
 					   	$pattern = "/(.*?)" . preg_quote($known) . "/";
 
-					   	echo $known;
+					 
 
 						// Kiểm tra và lấy phần chuỗi trước chuỗi đã biết
 						if (preg_match($pattern, $datas, $matchess)) {
