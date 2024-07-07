@@ -249,6 +249,8 @@
 					  
 					   	$pattern = "/(.*?)" . preg_quote($known) . "/";
 
+					   	echo $known;
+
 						// Kiểm tra và lấy phần chuỗi trước chuỗi đã biết
 						if (preg_match($pattern, $datas, $matchess)) {
 						    // In phần chuỗi phù hợp
