@@ -226,7 +226,7 @@
 
 			 $content = $model->textpdfs($filePath);
 
-		    print_r($content);
+		    print_r($filePath);
 
 		    die;
 		    
