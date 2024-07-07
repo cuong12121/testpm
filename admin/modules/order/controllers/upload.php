@@ -228,7 +228,9 @@
 
 			$number_page = shell_exec('pdftk '.$filePath.' dump_data | grep NumberOfPages');
 
-			// echo $filePath;
+			echo $number_page;
+
+			die;
 
 
 			$data = [];
