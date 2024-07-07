@@ -230,6 +230,8 @@
 
 			$number_page = str_replace('NumberOfPages:', '', $number_page);
 
+			$data = [];
+
 
 			if( intval($number_page)>0){
 				
@@ -256,7 +258,7 @@
 						// Kiểm tra và lấy phần chuỗi trước chuỗi đã biết
 						if (preg_match($pattern, $datas, $matchess)) {
 						    // In phần chuỗi phù hợp
-						    echo "Phần chuỗi trước '$known' là: " . $matchess[1];
+						    // echo "Phần chuỗi trước '$known' là: " . $matchess[1];
 
 						    $results = $matchess[1].$known;
 
