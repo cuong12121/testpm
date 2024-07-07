@@ -241,8 +241,6 @@
 
 					$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
-				    
-
 				    $pattern = "/\d{10}VNA/";
 
 					// Kiểm tra và lấy chuỗi phù hợp
@@ -253,8 +251,6 @@
 					  
 					   	$pattern = "/(.*?)" . preg_quote($known) . "/";
 
-					 
-
 						// Kiểm tra và lấy phần chuỗi trước chuỗi đã biết
 						if (preg_match($pattern, $datas, $matchess)) {
 						    // In phần chuỗi phù hợp
@@ -262,7 +258,11 @@
 
 						    $results = $matchess[1].$known;
 
-						    array_push($data, $results);
+						    $data[$i]['mavandon'] = $results;
+
+						     $data[$i]['sku'] = $data_convert[0];
+
+						    // array_push($data, $results);
 						}
 					}
 
