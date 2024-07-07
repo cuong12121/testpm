@@ -235,7 +235,7 @@
 		    $pattern = "/\d{10}VNA/";
 
 			// Kiểm tra và lấy chuỗi phù hợp
-			if (preg_match($pattern, $data_convert, $matches)) {
+			if (preg_match($pattern, $datas, $matches)) {
 			    // In chuỗi phù hợp
 			    echo "Chuỗi phù hợp: " . $matches[0];
 			}
