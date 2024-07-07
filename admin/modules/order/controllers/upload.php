@@ -216,7 +216,7 @@
 		{
 			$model  = $this -> model;
 
-			$file = "la7.pdf";
+			$file = "la6.pdf";
 
 			$filePath =  $path = PATH_BASE.'files/'.$file;
 
