@@ -241,12 +241,13 @@
 				
 				$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
+				// thay thế ký tự xuống dòng bằng chuỗi rỗng
+
 				$datas =  preg_replace("/\r?\n/", '', $datas);
 
 				$data_convert = $model->convertContentbest($datas);
 
-				array_push($data, $data_convert);
-			}
+				array_push($data, $datas)
 
 			
 
