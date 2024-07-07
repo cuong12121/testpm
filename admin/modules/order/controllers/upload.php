@@ -237,14 +237,16 @@
 			// Kiểm tra và lấy chuỗi phù hợp
 			if (preg_match($pattern, $datas, $matches)) {
 			    // In chuỗi phù hợp
+
+			    $known = $matches[0];
 			  
-			    $result = strstr($datas, $matches[0]);
+			   	$pattern = "/(.*?)" . preg_quote($known) . "/";
 
-			    if($result !== false){
-
-			    	echo $result;
-
-			    }
+				// Kiểm tra và lấy phần chuỗi trước chuỗi đã biết
+				if (preg_match($pattern, $datas, $matchess)) {
+				    // In phần chuỗi phù hợp
+				    echo "Phần chuỗi trước '$known' là: " . $matchess[1];
+				}
 			}
 
 		    die;
