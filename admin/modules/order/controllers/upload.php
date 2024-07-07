@@ -241,9 +241,9 @@
 				
 				$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
-				$data_convert = $model->convertContentLazada($datas);
+				$data_convert = $model->convertContentbest($datas);
 
-				array_push($data, $datas);
+				array_push($data, $data_convert);
 			}
 
 			
