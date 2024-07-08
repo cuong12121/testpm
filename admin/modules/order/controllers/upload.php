@@ -216,7 +216,7 @@
 		function testOutPdf()
 		{
 			
-			$print = $this->dataPDFViettel();
+			$print = $this->dataPDFTiktok();
 
 			print_r($print);
 			
