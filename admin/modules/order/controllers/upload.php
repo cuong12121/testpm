@@ -289,11 +289,7 @@
 
 				$datas =  preg_replace("/\r?\n/", '', $datas);
 
-				echo $datas;
-
-				die;
-
-				$mau_regex = '/(.*?)Người nhận/s'; // s cho phép . khớp với cả newline
+				$mau_regex = '/(\d+)Người gửi/'; // s cho phép . khớp với cả newline
 
 				if (preg_match($mau_regex, $datas, $matches)) {
 
