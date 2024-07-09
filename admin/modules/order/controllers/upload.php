@@ -164,51 +164,60 @@
 
 			global $db;
 
-			$model  = $this -> model;
+			$run = !empty($_GET['run'])?$_GET['run']:'';
 
-            $platform = [1,2,3,4,6,8,9,10,11];
+			echo $run;
 
-            // chạy đơn lúc 7h10
+			die;
 
-            $H = date('G');
+			if(!empty($run)){
 
-            $house_id = $H<8?13:18;
+				$model  = $this -> model;
 
-            $data_info = [];
+	            $platform = [1,2,3,4,6,8,9,10,11];
 
-            for($i=1; $i<3; $i++){
+	            // chạy đơn lúc 7h10
 
-                foreach ($platform as  $platforms) {
-                    
-                     $query =  "SELECT id FROM fs_order_uploads AS a WHERE 1=1 AND warehouse_id = ".$i." AND house_id = ".$house_id." AND platform_id = ".$platforms." AND date ='".date('Y-m-d')."' ORDER BY created_time DESC , id DESC";
+	            $H = date('G');
 
-                    $sql = $db->query ($query);
-                    $result = $db->getObjectList ();
+	            $house_id = $H<8?13:18;
 
-                    $list_Ar = [];
+	            $data_info = [];
 
-                    if(!empty($result)){
+	            for($i=1; $i<3; $i++){
 
-                        foreach ($result as $key => $value) {
-                       
-                            array_push($list_Ar, $value->id);
-                        }
+	                foreach ($platform as  $platforms) {
+	                    
+	                     $query =  "SELECT id FROM fs_order_uploads AS a WHERE 1=1 AND warehouse_id = ".$i." AND house_id = ".$house_id." AND platform_id = ".$platforms." AND date ='".date('Y-m-d')."' ORDER BY created_time DESC , id DESC";
 
-                    } 
+	                    $sql = $db->query ($query);
+	                    $result = $db->getObjectList ();
 
-                    $data_info['house_id'] = $house_id;
+	                    $list_Ar = [];
 
-                    $data_info['platforms'] = $platforms;
+	                    if(!empty($result)){
 
-                    $data_info['warehouse_id'] = $i;
+	                        foreach ($result as $key => $value) {
+	                       
+	                            array_push($list_Ar, $value->id);
+	                        }
 
-                    $list_ar_str = implode(',', $list_Ar);
+	                    } 
 
-                    $model->prints_auto($list_ar_str, $data_info);
+	                    $data_info['house_id'] = $house_id;
 
+	                    $data_info['platforms'] = $platforms;
 
-                }
-            }    
+	                    $data_info['warehouse_id'] = $i;
+
+	                    $list_ar_str = implode(',', $list_Ar);
+
+	                    $model->prints_auto($list_ar_str, $data_info);
+
+	                }
+	            }    
+
+			}
 
 		}
 
@@ -436,8 +445,6 @@
 
 		    // die;
 
-
-
 		    if(empty($checkMVD) && empty($checkSku)){
 
 		    	echo "đơn hàng không bị lỗi";
@@ -458,17 +465,10 @@
 		    	}
 		    }
 
-		   
-
 		    die;
 
-
-		    
-		    
 		    $data = [];
 		    
-		 
-
 		    $file = !empty($_GET['file'])?$_GET['file']:'sp4.pdf';
 		   
 		    $path = PATH_BASE.'files/'.$file;
