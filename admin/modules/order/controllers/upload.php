@@ -376,7 +376,7 @@
 
 			$number_page = shell_exec('pdftk '.$filePath.' dump_data | grep NumberOfPages');
 
-			
+
 
 			$number_page = str_replace('NumberOfPages:', '', $number_page);
 
@@ -391,7 +391,9 @@
 
 					$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
-					var_dump('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
+					$datass = PdfToText::getText($filePath);
+
+					var_dump($datass);
 
 					die;
 
