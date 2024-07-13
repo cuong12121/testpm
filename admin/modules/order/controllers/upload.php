@@ -376,6 +376,10 @@
 
 			$number_page = shell_exec('pdftk '.$filePath.' dump_data | grep NumberOfPages');
 
+			var_dump($number_page);
+
+			die;
+
 			$number_page = str_replace('NumberOfPages:', '', $number_page);
 
 
