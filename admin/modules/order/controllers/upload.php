@@ -376,7 +376,7 @@
 
 			$number_page = shell_exec('pdftk '.$filePath.' dump_data | grep NumberOfPages');
 
-			var_dump($number_page);
+			var_dump('pdftk '.$filePath.' dump_data | grep NumberOfPages');
 
 			die;
 
