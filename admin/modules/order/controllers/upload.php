@@ -369,7 +369,7 @@
 		{
 			$model  = $this -> model;
 
-			$file = "la12.pdf";
+			$file = "la11.pdf";
 
 			$filePath =  $path = PATH_BASE.'files/'.$file;
 
@@ -389,7 +389,7 @@
 
 					$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
-					var_dump('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
+					var_dump($datas);
 
 					die;
 
