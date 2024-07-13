@@ -389,7 +389,7 @@
 
 					$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
-					var_dump($datas);
+					var_dump('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
 					die;
 
