@@ -225,7 +225,7 @@
 		function testOutPdf()
 		{
 			
-			$print = $this->dataPDFTiktok();
+			$print = $this->dataPDFLazada();
 
 			print_r($print);
 			
