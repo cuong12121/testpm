@@ -358,9 +358,6 @@
 				
 				$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
-				var_dump($datas);
-
-				die;
 
 				// // thay thế ký tự xuống dòng bằng chuỗi rỗng
 
@@ -382,7 +379,14 @@
 			
 			}
 
+			var_dump($datas);
+
+				die;
+
 			return $data;
+
+
+
 
 
 		}
