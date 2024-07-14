@@ -102,9 +102,6 @@
 
 			$model = $this -> model;
 
-			var_dump($files);
-
-			die;
 
 			foreach ($files as $key => $value) {
 				
@@ -127,6 +124,11 @@
 
 
 			}
+
+			var_dump($all_data);
+
+			die;
+
 			if(count($all_data)){
 
 				
