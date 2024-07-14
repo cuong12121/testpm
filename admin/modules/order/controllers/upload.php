@@ -1,5 +1,4 @@
 <?php
-	use Escarter\PopplerPhp\PdfToText;
 	class OrderControllersUpload extends Controllers
 	{
 		function __construct()
@@ -370,7 +369,7 @@
 		{
 			$model  = $this -> model;
 
-			$file = "la13.pdf";
+			$file = "la14.pdf";
 
 			$filePath =  $path = PATH_BASE.'files/'.$file;
 
@@ -393,10 +392,6 @@
 					$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
 					$datass = PdfToText::getText($filePath);
-
-					var_dump($datass);
-
-					die;
 
 
 					$data_convert = $model->convertContentLazada($datas);
