@@ -361,10 +361,10 @@
 
 				// // thay thế ký tự xuống dòng bằng chuỗi rỗng
 
-				// $datas =  preg_replace("/\r?\n/", '', $datas);
+				$datas =  preg_replace("/\r?\n/", '', $datas);
 
 
-				$mau_regex = '/(.*?)Ngư ời nh ận/s'; // s cho phép . khớp với cả newline
+				$mau_regex = '/(.*?)Người nhận/s'; // s cho phép . khớp với cả newline
 
 				if (preg_match($mau_regex, $datas, $matches)) {
 
