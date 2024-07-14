@@ -290,17 +290,19 @@
 				   
 				} 
 
-				var_dump($datas);
-				die;
+				// $data_convert = $model->convertContentviettel($datas);
 
+				$data_convert = $model->convertContent($datas);
 
-
-				$data_convert = $model->convertContentviettel($datas);
+				
 
 				$data[$i]['sku'] =  $data_convert[0];
 
 			
 			}
+
+			var_dump($datas);
+				die;
 			return $data;
 
 		}
