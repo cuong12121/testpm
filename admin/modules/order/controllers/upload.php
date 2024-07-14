@@ -248,9 +248,9 @@
 		{
 			// $file =  ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
 
-			$file =  ['best1.pdf', 'best2.pdf'];
+			$file =  ['tiktok1.pdf', 'tiktoks.pdf'];
 
-			$platforms =5;
+			$platforms =4;
 
 			$print = $this->dataPDF($file, $platforms);
 
