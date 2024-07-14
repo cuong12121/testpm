@@ -442,11 +442,7 @@
 				}
 
 			}
-			echo"<pre>";
-
-			var_dump($data);
-			echo"</pre>";
-			die;
+			return $data;
 		}
 		
 		function test(){
