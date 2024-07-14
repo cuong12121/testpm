@@ -248,7 +248,7 @@
 		{
 			// $file =  ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
 
-			$file =  ['best1.pdf'];
+			$file =  ['best2.pdf'];
 
 			$platforms =5;
 
