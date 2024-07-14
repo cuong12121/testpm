@@ -374,7 +374,7 @@
 				die;
 
 
-				$mau_regex = '/(.*?)Người nhận/s'; // s cho phép . khớp với cả newline
+				$mau_regex = '/(.*?)Người nhậntình/s'; // s cho phép . khớp với cả newline
 
 				if (preg_match($mau_regex, $datas, $matches)) {
 
@@ -382,7 +382,7 @@
 				   
 				} 
 
-				$data_convert = $model->convertContentbest($datas);
+				$data_convert = $model->convertContent($datas);
 
 				$data[$i]['sku'] =  $data_convert[0];
 
