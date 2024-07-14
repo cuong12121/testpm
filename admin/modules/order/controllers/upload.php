@@ -286,7 +286,7 @@
 
 				if (preg_match($mau_regex, $datas, $matches)) {
 
-					$data[$i]['mavandon'] = $matches[0];
+					$data['mavandon'][$i] = $matches[0];
 				   
 				} 
 
@@ -294,15 +294,10 @@
 
 				$data_convert = $model->convertContent($datas);
 
-				
-
-				$data[$i]['sku'] =  $data_convert[0][0];
-
+				$data['sku'][$i] =  $data_convert[0][0];
 			
 			}
 
-			var_dump($data);
-				die;
 			return $data;
 
 		}
