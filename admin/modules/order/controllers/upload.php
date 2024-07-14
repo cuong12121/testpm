@@ -378,13 +378,13 @@
 
 				if (preg_match($mau_regex, $datas, $matches)) {
 
-					$data[$i]['mavandon'] = $matches[1];
+					$data['mavandon'][$i] = $matches[1];
 				   
 				} 
 
 				$data_convert = $model->convertContent($datas);
 
-				$data[$i]['sku'] =  $data_convert[0];
+				$data['sku'][$i] =  $data_convert[0];
 
 			
 			}
