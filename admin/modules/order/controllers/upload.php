@@ -290,7 +290,11 @@
 				   
 				} 
 
-				
+				var_dump('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
+				die;
+
+
+
 				$data_convert = $model->convertContentviettel($datas);
 
 				$data[$i]['sku'] =  $data_convert[0];
