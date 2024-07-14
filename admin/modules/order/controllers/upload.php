@@ -324,7 +324,7 @@
 
 				$datas =  preg_replace("/\r?\n/", '', $datas);
 
-				$mau_regex = '/\d{14}/'; // s cho phép . khớp với cả newline
+				$mau_regex = '/(\d+)Người gửi/'; // s cho phép . khớp với cả newline
 
 				if (preg_match($mau_regex, $datas, $matches)) {
 
@@ -334,7 +334,7 @@
 
 				$data_convert = $model->convertContenttiktok($datas);
 
-				$data['sku'][$i] =  $data_convert[0][0];
+				$data['sku'][$i] =  $data_convert[0];
 
 			
 			}
@@ -364,7 +364,7 @@
 				$datas =  preg_replace("/\r?\n/", '', $datas);
 
 
-				$mau_regex = '/(.*?)Người nhận/s'; // s cho phép . khớp với cả newline
+				$mau_regex = '/\d{14}/'; // s cho phép . khớp với cả newline
 
 				if (preg_match($mau_regex, $datas, $matches)) {
 
@@ -374,7 +374,7 @@
 
 				$data_convert = $model->convertContentCheck($datas);
 
-				$data['sku'][$i] =  $data_convert[0];
+				$data['sku'][$i] =  $data_convert[0][0];
 
 			
 			}
