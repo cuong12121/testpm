@@ -324,11 +324,11 @@
 
 				$datas =  preg_replace("/\r?\n/", '', $datas);
 
-				$mau_regex = '/(\d+)Người gửi/'; // s cho phép . khớp với cả newline
+				$mau_regex = '/\d{14}/'; // s cho phép . khớp với cả newline
 
 				if (preg_match($mau_regex, $datas, $matches)) {
 
-					$data['mavandon'][$i] = $matches[1];
+					$data['mavandon'][$i] = $matches[1][0];
 				   
 				} 
 
