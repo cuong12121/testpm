@@ -111,11 +111,11 @@
 
 			    // shopee
 				
-				$data  = $this->returnDataPDF($path);
+				// $data  = $this->returnDataPDF($path);
 
 				// lazada
 
-				// $data = $this->dataPDFLazada($path);
+				$data = $this->dataPDFLazada($path);
 
 			    array_push($all_data, $data);
 
@@ -233,7 +233,9 @@
 
 		function testOutPdf()
 		{
-			$file =  ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
+			// $file =  ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
+
+			$file =  ['la11.pdf', 'la16.pdf'];
 
 			$print = $this->dataPDF($file);
 
