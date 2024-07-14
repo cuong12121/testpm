@@ -127,14 +127,8 @@
 
 			}
 
-			echo "<pre>"; print_r($all_data); echo"</pre>";
-
-				die;
-
-
-
-
-			if(count($all_data)){
+	
+			if(!empty($all_data) && count($all_data)>0){
 
 				
 
