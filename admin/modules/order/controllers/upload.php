@@ -379,7 +379,7 @@
 			
 			}
 
-			var_dump($datas);
+			var_dump($data);
 
 				die;
 
