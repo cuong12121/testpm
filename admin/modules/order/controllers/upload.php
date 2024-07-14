@@ -237,6 +237,10 @@
 
 			$file =  ['la11.pdf', 'la16.pdf'];
 
+			$platforms =2;
+
+
+
 			$print = $this->dataPDF($file, $platforms);
 
 			// $print = $this->dataPDFLazada();
