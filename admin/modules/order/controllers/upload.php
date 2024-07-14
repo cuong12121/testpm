@@ -85,7 +85,7 @@
 		   	return $data;
 		}
 
-		function dataPDF($files)
+		function dataPDF($files, $platforms)
 		{
 
 			$all_data = [];
@@ -109,50 +109,50 @@
 		   
 			    $path  = PATH_BASE.'files/'.trim($file);
 
-			    // shopee
+			    if($platforms===1){
+					// shopee
 				
-				// $data  = $this->returnDataPDF($path);
-
-				// lazada
-
-				$data = $this->dataPDFLazada($path);
+					$data  = $this->returnDataPDF($path);
+			    }
+			    else{
+			    	// lazada
+			    	$data = $this->dataPDFLazada($path);
+			    }
 
 			    array_push($all_data, $data);
 
 			}
-
-			
-
 	
 			if(!empty($all_data) && count($all_data)>0){
 
 				foreach ($all_data as $key => $vals) {
 
-					echo "<pre>"; print_r($vals); echo "</pre>";
+					
+					if(!empty($vals['mavandon'])  && !empty($vals['sku'])){
+						if(count($vals['mavandon'])>0){
 
-					die;
-					if(count($vals['mavandon'])>0){
+							foreach ($vals['mavandon'] as $key => $value) {
+								$dem++;
 
-						foreach ($vals['mavandon'] as $key => $value) {
-							$dem++;
-
-							$mvd[$dem] = $value;
-						
-						}
-
-					}
-
-					if(count($vals['sku'])>0){
-
-						foreach ($vals['sku'] as $key => $vals) {
-							$dems ++;
-
-							$sku[$dems] = $vals;
+								$mvd[$dem] = $value;
 							
+							}
 
 						}
 
+						if(count($vals['sku'])>0){
+
+							foreach ($vals['sku'] as $key => $vals) {
+								$dems ++;
+
+								$sku[$dems] = $vals;
+								
+
+							}
+
+						}
 					}
+					
 					
 				}
 
@@ -237,8 +237,7 @@
 
 			$file =  ['la11.pdf', 'la16.pdf'];
 
-			$print = $this->dataPDF($file);
-
+			$print = $this->dataPDF($file, $platforms);
 
 			// $print = $this->dataPDFLazada();
 
