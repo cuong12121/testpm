@@ -74,9 +74,9 @@
 
 				    $sku = $model->contendTextFindSku($path,$page);
 
-				    $data[$i]['mavandon'] = $mvd[0]??'';
+				    $data['mavandon'][$i] = $mvd[0]??'';
 
-				    $data[$i]['sku'] = $sku[0]??'';
+				    $data['sku'][$i] = $sku[0]??'';
 
 		   		}
 
@@ -233,7 +233,7 @@
 
 		function testOutPdf()
 		{
-			$file = ['la16.pdf'];
+			$file = ['la16.pdf', 'la11.pdf'];
 
 			$print = $this->dataPDF($file);
 
