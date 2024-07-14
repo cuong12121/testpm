@@ -230,11 +230,7 @@
 
 		function testOutPdf()
 		{
-			$file = ['la11.pdf'];
-
-			var_dump($file);
-
-			die;
+			$file = ['la16.pdf', 'la11.pd'];
 
 			$print = $this->dataPDF($file);
 
@@ -379,11 +375,11 @@
 
 		//lấy thông số file pdf lazada
 
-		function dataPDFLazada()
+		function dataPDFLazada($file)
 		{
 			$model  = $this -> model;
 
-			$file = "la16.pdf";
+			
 
 			$filePath =  $path = PATH_BASE.'files/'.$file;
 
