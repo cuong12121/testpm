@@ -242,7 +242,7 @@
 
 		function testOutPdf()
 		{
-			$file = ['la16.pdf', 'la11.pd'];
+			$file = ['la16.pdf', 'la11.pdf'];
 
 			$print = $this->dataPDF($file);
 
@@ -393,7 +393,7 @@
 
 			
 
-			$filePath =  $path = PATH_BASE.'files/'.$file;
+			$filePath =  $file;
 
 
 			$number_page = shell_exec('pdftk '.$filePath.' dump_data | grep NumberOfPages');
