@@ -1734,7 +1734,7 @@
 
 
 
-        public function showDataExcel($file_path,$mvd,$sku)
+        public function showDataExcel($file_path,$sku, $mvd)
         {
             // $files = 'ex2.xlsx';
             // $file_path = PATH_BASE.'files/'.$files;
