@@ -413,7 +413,7 @@
 
 						    $data[$i]['mavandon'] = $results;
 
-						     $data[$i]['sku'] = @$data_convert[0][0];
+						     $data[$i]['sku'] =   str_replace(' ', '', @$data_convert[0][0]);
 
 						    // array_push($data, $results);
 						}
