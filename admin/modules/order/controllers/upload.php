@@ -391,9 +391,7 @@
 
 					$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
-					$datass = PdfToText::getText($filePath);
-
-
+					
 					$data_convert = $model->convertContentLazada($datas);
 
 				    $pattern = "/\d{10}VNA/";
