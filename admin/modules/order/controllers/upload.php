@@ -270,7 +270,7 @@
 
 			$number_page = str_replace('NumberOfPages:', '', $number_page);
 
-			var_dump($number_page);
+			
 
 			$data = [];
 
