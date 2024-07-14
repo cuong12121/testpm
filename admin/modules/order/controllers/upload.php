@@ -224,8 +224,12 @@
 
 		function testOutPdf()
 		{
-			
-			$print = $this->dataPDFLazada();
+			$file = ['la16.pdf'];
+
+			$print = $this->dataPDF($file);
+
+
+			// $print = $this->dataPDFLazada();
 
 			print_r($print);
 			
