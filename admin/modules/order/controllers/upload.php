@@ -130,9 +130,11 @@
 	
 			if(!empty($all_data) && count($all_data)>0){
 
-				
-
 				foreach ($all_data as $key => $vals) {
+
+					echo"<pre>"; var_dump($vals); echo"</pre>"; 
+
+					die;
 
 
 					if(count($vals['mavandon'])>0){
