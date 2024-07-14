@@ -111,19 +111,13 @@
 
 			    // shopee
 				
-				// $data  = $this->returnDataPDF($path);
+				$data  = $this->returnDataPDF($path);
 
 				// lazada
 
-				
+				// $data = $this->dataPDFLazada($path);
 
-				$data = $this->dataPDFLazada($path);
-
-
-				
 			    array_push($all_data, $data);
-
-
 
 			}
 
@@ -239,7 +233,7 @@
 
 		function testOutPdf()
 		{
-			$file = ['la16.pdf', 'la11.pdf'];
+			$file = ['sp8.pdf', 'sp9.pdf'];
 
 			$print = $this->dataPDF($file);
 
