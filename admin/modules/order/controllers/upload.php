@@ -368,7 +368,7 @@
 
 				if (preg_match($mau_regex, $datas, $matches)) {
 
-					$data['mavandon'][$i] = $matches[1];
+					$data['mavandon'][$i] = $matches[0];
 				   
 				} 
 
