@@ -356,7 +356,7 @@
 
 			$data = [];
 
-			for ($i=0; $i < intval($number_page); $i++) { 
+			for ($i=1; $i <= intval($number_page); $i++) { 
 				
 				$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
