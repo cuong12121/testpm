@@ -296,7 +296,7 @@
 
 				
 
-				$data[$i]['sku'] =  $data_convert[0];
+				$data[$i]['sku'] =  $data_convert[0][0];
 
 			
 			}
