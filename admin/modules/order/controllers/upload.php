@@ -248,7 +248,7 @@
 		{
 			// $file =  ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
 
-			$file =  ['viettel1.pdf, viettel2.pdf'];
+			$file =  ['viettel1.pdf'];
 
 			$platforms =3;
 
@@ -288,9 +288,9 @@
 				   
 				} 
 
-				// $data_convert = $model->convertContentviettel($datas);
+				$data_convert = $model->convertContentviettel($datas);
 
-				$data_convert = $model->convertContentCheck($datas);
+				// $data_convert = $model->convertContentCheck($datas);
 
 				$data['sku'][$i] =  $data_convert[0][0];
 			
