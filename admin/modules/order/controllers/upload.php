@@ -110,19 +110,19 @@
 			    $path  = PATH_BASE.'files/'.trim($file);
 
 			    switch ($platforms) {
-			    	case '5':
+			    	case 5:
 			    		$data  = $this->dataPDFBest($path);
 
-			    	case '2':		
+			    	case 2:		
 			    		$data = $this->dataPDFLazada($path);
 
-			    	case '3':		
+			    	case 3:		
 			    		$data = $this->dataPDFViettel($path);
-			    	case '4':		
+			    	case 4:		
 			    		$data = $this->dataPDFTiktok($path);	
 
 			    	default:
-			    		var_dump(1);
+			    		var_dump(12323);
 
 			    		die;
 			    		// shopee
