@@ -290,6 +290,11 @@
 				   
 				} 
 
+				var_dump($filePath);
+				die;
+
+
+
 				$data_convert = $model->convertContentviettel($datas);
 
 				$data[$i]['sku'] =  $data_convert[0];
