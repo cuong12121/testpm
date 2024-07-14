@@ -290,7 +290,7 @@
 				   
 				} 
 
-				var_dump('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
+				var_dump($datas);
 				die;
 
 
