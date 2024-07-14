@@ -102,6 +102,10 @@
 
 			$model = $this -> model;
 
+			var_dump($files);
+
+			die;
+
 			foreach ($files as $key => $value) {
 				
 				$file  = $value;
@@ -116,7 +120,7 @@
 
 				$data = $this->dataPDFLazada($path);
 
-				var_dump($path);
+
 	
 			    array_push($all_data, $data);
 
