@@ -107,8 +107,14 @@
 				$file  = $value;
 		   
 			    $path  = PATH_BASE.'files/'.$file;
+
+			    // shopee
 				
-				$data  = $this->returnDataPDF($path);
+				// $data  = $this->returnDataPDF($path);
+
+				// lazada
+
+				$data = $this->dataPDFLazada($path);
 	
 			    array_push($all_data, $data);
 
