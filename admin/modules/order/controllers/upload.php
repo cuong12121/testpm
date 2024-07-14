@@ -248,7 +248,7 @@
 		{
 			// $file =  ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
 
-			$file =  ['viettel1.pdf'];
+			$file =  ['viettel1.pdf', 'viettel2.pdf'];
 
 			$platforms =3;
 
