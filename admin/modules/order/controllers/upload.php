@@ -111,11 +111,11 @@
 
 			    // shopee
 				
-				$data  = $this->returnDataPDF($path);
+				// $data  = $this->returnDataPDF($path);
 
 				// lazada
 
-				// $data = $this->dataPDFLazada($path);
+				$data = $this->dataPDFLazada($path);
 
 			    array_push($all_data, $data);
 
@@ -233,7 +233,7 @@
 
 		function testOutPdf()
 		{
-			$file = ['sp8.pdf', 'sp9.pdf'];
+			$file = ['la11.pdf', 'la16.pdf'];
 
 			$print = $this->dataPDF($file);
 
@@ -424,9 +424,9 @@
 
 						    $results = $matchess[1].$known;
 
-						    $data[$i]['mavandon'] = $results;
+						    $data['mavandon'][$i] = $results;
 
-						     $data[$i]['sku'] =  $replaced_string = preg_replace('/\s/', '', @$data_convert[0][0]); 
+						     $data['sku'][$i] =  $replaced_string = preg_replace('/\s/', '', @$data_convert[0][0]); 
 
 						    // array_push($data, $results);
 						}
