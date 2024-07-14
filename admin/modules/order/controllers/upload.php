@@ -230,7 +230,7 @@
 
 		function testOutPdf()
 		{
-			$file = ['la16.pdf', 'la11.pdf'];
+			$file = ['la11.pdf'];
 
 			$print = $this->dataPDF($file);
 
