@@ -369,9 +369,9 @@
 
 				$datas =  preg_replace("/\r?\n/", '', $datas);
 
-				var_dump($datas);
+				// var_dump($datas);
 
-				die;
+				// die;
 
 
 				$mau_regex = '/(.*?)Người nhậntình/s'; // s cho phép . khớp với cả newline
