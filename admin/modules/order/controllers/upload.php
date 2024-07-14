@@ -109,27 +109,29 @@
 		   
 			    $path  = PATH_BASE.'files/'.trim($file);
 
-			    var_dump($platforms);
+			  
 
 			    switch ($platforms) {
 			    	case 5:
 			    		$data  = $this->dataPDFBest($path);
+			    		break;
 
 			    	case 2:		
 			    		$data = $this->dataPDFLazada($path);
+			    		break;
 
 			    	case 3:		
 			    		$data = $this->dataPDFViettel($path);
+			    		break;
 			    	case 4:		
 			    		$data = $this->dataPDFTiktok($path);	
+			    		break;
 
 			    	default:
-			    		var_dump(12323);
-
-			    		die;
+			    		
 			    		// shopee
 			    		$data  = $this->returnDataPDF($path);
-			    		break;
+			    	
 			    }
 
 			    array_push($all_data, $data);
