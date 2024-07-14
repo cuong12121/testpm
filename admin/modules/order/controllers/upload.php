@@ -252,29 +252,27 @@
 
 			$path = PATH_BASE.'files/'.$file;
 
+			$platforms =1;
+
 			$model  = $this -> model;
 
-			// lazada = F, BG;
+			$excel_kytu[1] = ['F','S'];
 
-			//shopee = F, S;
+			$excel_kytu[2] = ['F','BG'];
 
-			//tiktok = L, D
+			$excel_kytu[4] = ['L','D'];
 
-			//vietel = L, D
+			$excel_kytu[3] = ['L','D'];
 
-			// Best = L, D
+			$excel_kytu[5] = ['L','D'];
 
+			$test =  $model->showDataExcel($path, $excel_kytu[$platforms][0], $excel_kytu[$platforms][1]);
 
-			$test =  $model->showDataExcel($path, 'D', 'L');
-
-			var_dump($test);
-
-
-			die;  
+		
 
 			$file =  ['shopee3.pdf', 'shopee4.pdf', 'shopee5.pdf'];
 
-			$platforms =1;
+			
 
 			$print = $this->dataPDF($file, $platforms);
 
