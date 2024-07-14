@@ -282,7 +282,7 @@
 
 				$datas =  preg_replace("/\r?\n/", '', $datas);
 
-				$mau_regex = '/(.*?)Mã khách hàng/s'; // s cho phép . khớp với cả newline
+				$mau_regex = '/\d{13}/'; // s cho phép . khớp với cả newline
 
 				if (preg_match($mau_regex, $datas, $matches)) {
 
