@@ -372,7 +372,7 @@
 				   
 				} 
 
-				$data_convert = $model->convertContent($datas);
+				$data_convert = $model->convertContentCheck($datas);
 
 				$data['sku'][$i] =  $data_convert[0];
 
