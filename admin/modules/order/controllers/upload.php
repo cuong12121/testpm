@@ -328,13 +328,13 @@
 
 				if (preg_match($mau_regex, $datas, $matches)) {
 
-					$data['mavandon'][$i] = $matches[1][0];
+					$data['mavandon'][$i] = $matches[1];
 				   
 				} 
 
 				$data_convert = $model->convertContenttiktok($datas);
 
-				$data['sku'][$i] =  $data_convert[0];
+				$data['sku'][$i] =  $data_convert[0][0];
 
 			
 			}
