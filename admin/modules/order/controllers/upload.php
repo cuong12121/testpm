@@ -122,7 +122,9 @@
 			    		$data = $this->dataPDFTiktok($path);	
 
 			    	default:
+			    		var_dump(1);
 
+			    		die;
 			    		// shopee
 			    		$data  = $this->returnDataPDF($path);
 			    		break;
