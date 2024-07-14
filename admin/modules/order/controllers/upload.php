@@ -115,11 +115,13 @@
 
 				// lazada
 
-				var_dump($path);
-
-				die;
+				
 
 				$data = $this->dataPDFLazada($path);
+
+				var_dump($data);
+
+				die;
 
 
 	
