@@ -248,9 +248,9 @@
 		{
 			// $file =  ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
 
-			$file =  ['la11.pdf', 'la16.pdf'];
+			$file =  ['shopee3.pdf', 'shopee4.pdf', 'shopee5.pdf'];
 
-			$platforms =2;
+			$platforms =1;
 
 			$print = $this->dataPDF($file, $platforms);
 
