@@ -109,8 +109,6 @@
 		   
 			    $path  = PATH_BASE.'files/'.trim($file);
 
-			  
-
 			    switch ($platforms) {
 			    	case 5:
 			    		$data  = $this->dataPDFBest($path);
@@ -250,7 +248,7 @@
 		{
 			// $file =  ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
 
-			$file =  ['best1.pdf', 'best2.pdf'];
+			$file =  ['best2.pdf'];
 
 			$platforms =5;
 
@@ -360,18 +358,9 @@
 				
 				$datas = shell_exec('pdftotext  -raw -f '.$i.' -l '.$i.' '.$filePath.' -');
 
-
-				// echo $datas;
-
-				// die;
-
 				// // thay thế ký tự xuống dòng bằng chuỗi rỗng
 
 				$datas =  preg_replace("/\r?\n/", '', $datas);
-
-				// var_dump($datas);
-
-				// die;
 
 
 				$mau_regex = '/(.*?)Người nhậntình/s'; // s cho phép . khớp với cả newline
