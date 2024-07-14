@@ -344,14 +344,11 @@
 			
 		}
 
-		function dataPDFBest()
+		function dataPDFBest($filePath)
 		{
 
 			$model  = $this -> model;
 
-			$file = "best1.pdf";
-
-			$filePath =  $path = PATH_BASE.'files/'.$file;
 
 			$number_page = shell_exec('pdftk '.$filePath.' dump_data | grep NumberOfPages');
 
