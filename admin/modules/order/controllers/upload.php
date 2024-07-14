@@ -246,7 +246,25 @@
 
 		function testOutPdf()
 		{
+
+			$file = 'exe1.xlsx';
 			// $file =  ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
+
+			$file = PATH_BASE.'files/'.$file;
+
+			$model  = $this -> model;
+
+			// lazada = F, BG;
+
+			//shopee = F, S;
+
+
+			$test =  $model->showDataExcel($path, 'BG', 'F');
+
+			var_dump($test);
+
+
+			die;  
 
 			$file =  ['shopee3.pdf', 'shopee4.pdf', 'shopee5.pdf'];
 
@@ -455,8 +473,6 @@
 		   
 		    $path = PATH_BASE.'files/'.$file;
 
-		    $test =  $model->showDataExcel($path);
-		   
 		    $filePDF = ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
 
 		    $data_pdf = $this->dataPDF($filePDF);

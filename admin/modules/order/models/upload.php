@@ -1734,7 +1734,7 @@
 
 
 
-        public function showDataExcel($file_path)
+        public function showDataExcel($file_path, $sku, $mvd)
         {
             // $files = 'ex2.xlsx';
             // $file_path = PATH_BASE.'files/'.$files;
@@ -1763,15 +1763,12 @@
             for($j=2;$j<=$heightRow;$j++){
                 
                
-                $row['maVanDon'][$k] = trim($data[$j]['F']);
+                $row['maVanDon'][$k] = trim($data[$j][$mvd]);
 
 
-                $sku =   $this->convertContentCheckExcel(trim($data[$j]['S']));
+                $sku =   $this->convertContentCheckExcel(trim($data[$j][$sku]));
 
                 $skuss = ($sku)[0];
-
-                
-
 
                 $skus[$k] = $skuss[0];
 
