@@ -66,17 +66,17 @@
 
 		   	if($number_page>0){
 
-		   		for($i =0; $i<$number_page; $i++){
+		   		for($i =1; $i<=$number_page; $i++){
 
-		   			$page = $i+1;
+		   			$page = $i;
 
 		   			$mvd = $model->contendTextFindMvd($path,$page);
 
 				    $sku = $model->contendTextFindSku($path,$page);
 
-				    $data['mavandon'][$i] = $mvd[0]??'';
+				    $data['mavandon'][] = $mvd[0]??'';
 
-				    $data['sku'][$i] = $sku[0]??'';
+				    $data['sku'][] = $sku[0]??'';
 
 		   		}
 
