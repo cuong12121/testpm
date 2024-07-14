@@ -121,20 +121,16 @@
 
 			}
 
-			echo "<pre>"; print_r($all_data); echo "</pre>";
-
-			die;
+			
 
 	
 			if(!empty($all_data) && count($all_data)>0){
 
 				foreach ($all_data as $key => $vals) {
 
-					echo"<pre>"; var_dump($vals); echo"</pre>"; 
+					echo "<pre>"; print_r($vals); echo "</pre>";
 
 					die;
-
-
 					if(count($vals['mavandon'])>0){
 
 						foreach ($vals['mavandon'] as $key => $value) {
