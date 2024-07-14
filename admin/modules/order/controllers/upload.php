@@ -109,14 +109,23 @@
 		   
 			    $path  = PATH_BASE.'files/'.trim($file);
 
-			    if($platforms===1){
-					// shopee
-				
-					$data  = $this->returnDataPDF($path);
-			    }
-			    else{
-			    	// lazada
-			    	$data = $this->dataPDFLazada($path);
+			    switch ($platforms) {
+			    	case '5':
+			    		$data  = $this->dataPDFBest($path);
+
+			    	case '2':		
+			    		$data = $this->dataPDFLazada($path);
+
+			    	case '3':		
+			    		$data = $this->dataPDFViettel($path);
+			    	case '4':		
+			    		$data = $this->dataPDFTiktok($path);	
+
+			    	default:
+
+			    		// shopee
+			    		$data  = $this->returnDataPDF($path);
+			    		break;
 			    }
 
 			    array_push($all_data, $data);
@@ -235,11 +244,9 @@
 		{
 			// $file =  ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
 
-			$file =  ['la11.pdf', 'la16.pdf'];
+			$file =  ['viettel1.pdf', 'viettel2.pdf'];
 
-			$platforms =2;
-
-
+			$platforms =3;
 
 			$print = $this->dataPDF($file, $platforms);
 
@@ -249,13 +256,9 @@
 			
 		}
 
-		function dataPDFViettel(){
+		function dataPDFViettel($filePath){
 
 			$model  = $this -> model;
-
-			$file = "vt2.pdf";
-
-			$filePath =  $path = PATH_BASE.'files/'.$file;
 
 			$number_page = shell_exec('pdftk '.$filePath.' dump_data | grep NumberOfPages');
 
@@ -290,13 +293,12 @@
 		}
 
 
-		function dataPDFTiktok()
+		function dataPDFTiktok($filePath)
 		{
 			$model  = $this -> model;
 
 			$file = "tiktok1.pdf";
 
-			$filePath =  $path = PATH_BASE.'files/'.$file;
 
 			$number_page = shell_exec('pdftk '.$filePath.' dump_data | grep NumberOfPages');
 
