@@ -107,7 +107,7 @@
 				
 				$file  = $value;
 		   
-			    $path  = PATH_BASE.'files/'.$file;
+			    $path  = PATH_BASE.'files/'.trim($file);
 
 			    // shopee
 				
