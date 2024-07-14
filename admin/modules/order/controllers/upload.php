@@ -115,6 +115,10 @@
 
 				// lazada
 
+				var_dump($path);
+
+				die;
+
 				$data = $this->dataPDFLazada($path);
 
 
@@ -125,9 +129,7 @@
 
 			}
 
-			var_dump($all_data);
 
-			die;
 
 			if(count($all_data)){
 
