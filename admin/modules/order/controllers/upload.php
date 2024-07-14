@@ -250,7 +250,7 @@
 			$file = 'exe1.xlsx';
 			// $file =  ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
 
-			$file = PATH_BASE.'files/'.$file;
+			$path = PATH_BASE.'files/'.$file;
 
 			$model  = $this -> model;
 
