@@ -109,6 +109,8 @@
 		   
 			    $path  = PATH_BASE.'files/'.trim($file);
 
+			    var_dump($platforms);
+
 			    switch ($platforms) {
 			    	case 5:
 			    		$data  = $this->dataPDFBest($path);
