@@ -248,7 +248,7 @@
 		{
 			// $file =  ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
 
-			$file =  ['tiktok1.pdf', 'tiktoks.pdf'];
+			$file =  ['tiktok1.pdf', 'tiktoks.pdf', 'tiktok.pdf'];
 
 			$platforms =4;
 
