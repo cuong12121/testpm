@@ -249,7 +249,7 @@
 
 			// $print = $this->dataPDFLazada();
 
-			print_r($print);
+			echo '<pre>';print_r($print); echo '</pre>';
 			
 		}
 
