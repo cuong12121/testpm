@@ -247,7 +247,7 @@
 		function testOutPdf()
 		{
 
-			$file = 'exe1.xlsx';
+			$file = 'exe2.xlsx';
 			// $file =  ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
 
 			$path = PATH_BASE.'files/'.$file;
@@ -258,8 +258,14 @@
 
 			//shopee = F, S;
 
+			//tiktok = L, D
 
-			$test =  $model->showDataExcel($path, 'BG', 'F');
+			//vietel = L, D
+
+			// Best = L, D
+
+
+			$test =  $model->showDataExcel($path, 'D', 'L');
 
 			var_dump($test);
 
