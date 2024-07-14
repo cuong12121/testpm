@@ -116,7 +116,7 @@
 
 				$data = $this->dataPDFLazada($path);
 
-				var_dump($data);
+				var_dump($path);
 	
 			    array_push($all_data, $data);
 
