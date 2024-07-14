@@ -232,6 +232,10 @@
 		{
 			$file = ['la11.pdf'];
 
+			var_dump($file);
+
+			die;
+
 			$print = $this->dataPDF($file);
 
 
