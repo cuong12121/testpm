@@ -264,6 +264,8 @@
 
 			$number_page = str_replace('NumberOfPages:', '', $number_page);
 
+			var_dump($number_page);
+
 			$data = [];
 
 			for ($i=0; $i < intval($number_page); $i++) { 
