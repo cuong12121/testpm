@@ -307,8 +307,6 @@
 		{
 			$model  = $this -> model;
 
-			$file = "tiktok1.pdf";
-
 
 			$number_page = shell_exec('pdftk '.$filePath.' dump_data | grep NumberOfPages');
 
@@ -332,13 +330,13 @@
 
 				if (preg_match($mau_regex, $datas, $matches)) {
 
-					$data[$i]['mavandon'] = $matches[1];
+					$data['mavandon'][$i] = $matches[1];
 				   
 				} 
 
 				$data_convert = $model->convertContenttiktok($datas);
 
-				$data[$i]['sku'] =  $data_convert[0];
+				$data['sku'][$i] =  $data_convert[0];
 
 			
 			}
