@@ -119,9 +119,6 @@
 
 				$data = $this->dataPDFLazada($path);
 
-				echo "<pre>"; print_r($data); echo"</pre>";
-
-				die;
 
 				
 			    array_push($all_data, $data);
@@ -129,6 +126,11 @@
 
 
 			}
+
+			echo "<pre>"; print_r($all_data); echo"</pre>";
+
+				die;
+
 
 
 
