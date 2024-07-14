@@ -1763,10 +1763,10 @@
             for($j=2;$j<=$heightRow;$j++){
                 
                
-                $row['maVanDon'][$k] = trim($data[$j][$mvd]);
+                $row['maVanDon'][$k] = trim($data[$j]['BG']);
 
 
-                $sku =   $this->convertContentCheckExcel(trim($data[$j][$sku]));
+                $sku =   $this->convertContentCheckExcel(trim($data[$j]['F']));
 
                 $skuss = ($sku)[0];
 
