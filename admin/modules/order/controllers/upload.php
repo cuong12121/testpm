@@ -250,7 +250,7 @@
 
 			$i =1;
 
-			$datas = shell_exec('pdftotext  -layout -f '.$i.' -l '.$i.' '.$filePath.' -');
+			$datas = shell_exec('pdftotext -f '.$i.' -l '.$i.' '.$filePath.' -');
 
 			var_dump(empty($datas));
 
