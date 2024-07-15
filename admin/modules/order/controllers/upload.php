@@ -252,7 +252,9 @@
 
 			$datas = shell_exec('pdftotext  -layout -f '.$i.' -l '.$i.' '.$filePath.' -');
 
-			print_r($datas);
+			var_dump(empty($datas));
+
+
 
 			die;
 
