@@ -254,6 +254,10 @@
 
 			var_dump(empty($datas));
 
+			if(empty($datas)){
+				echo "rỗng";
+			}
+
 
 
 			die;
