@@ -248,6 +248,8 @@
 		{
 			$filePath = PATH_BASE.'files/la13.pdf';
 
+			$i =1;
+
 			$datas = shell_exec('pdftotext  -layout -f '.$i.' -l '.$i.' '.$filePath.' -');
 
 			print_r($datas);
