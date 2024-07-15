@@ -246,6 +246,14 @@
 
 		function testOutPdf()
 		{
+			$filePath = PATH_BASE.'files/la13.pdf';
+
+			$datas = shell_exec('pdftotext  -layout -f '.$i.' -l '.$i.' '.$filePath.' -');
+
+			print_r($datas);
+
+			die;
+
 
 			$file = 'exe2.xlsx';
 			// $file =  ['kgh-vnpost_1719639461_cv.pdf','kgh-spx_1719639461_cv.pdf','kgh-ghn_1719639461_cv.pdf'];
@@ -368,7 +376,6 @@
 		{
 
 			$model  = $this -> model;
-
 
 			$number_page = shell_exec('pdftk '.$filePath.' dump_data | grep NumberOfPages');
 
