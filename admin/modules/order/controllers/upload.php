@@ -254,8 +254,8 @@
 
 			var_dump(empty($datas));
 
-			if(empty($datas)){
-				echo "rỗng";
+			if(!empty($datas)){
+				echo $datas;
 			}
 
 
