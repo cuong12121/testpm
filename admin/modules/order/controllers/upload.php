@@ -252,13 +252,9 @@
 
 			$datas = shell_exec('pdftotext -f '.$i.' -l '.$i.' '.$filePath.' -');
 
-			var_dump(empty($datas));
+			$check_empty = substr($datas, 1);
 
-			if(!empty($datas)){
-				echo $datas;
-			}
-
-
+			var_dump(empty($check_empty));
 
 			die;
 
