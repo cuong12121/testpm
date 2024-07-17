@@ -22,7 +22,7 @@ class OrderControllersUpload extends Controllers
 
 		function returnDataPDF($path)
 		{
-			$data =1
+			$data =1;
 
 		   	return $data;
 		}	
