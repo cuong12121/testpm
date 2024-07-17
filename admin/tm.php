@@ -1,4 +1,17 @@
 <?php
+
+
+require_once ("../includes/config.php");
+require_once ("includes/defines.php");
+require_once ('../libraries/database/pdo.php');
+global $db;
+$db = new FS_PDO();
+
+require_once ("../includes/functions.php");
+require_once ("../libraries/fsinput.php");
+require_once('../libraries/fsfactory.php');
+require_once ("../libraries/fstext.php");
+require_once ("libraries/fstable.php");
 require_once ("libraries/toolbar/toolbar.php");
 require_once ("libraries/fsrouter.php");
 require_once ("libraries/pagination.php");
