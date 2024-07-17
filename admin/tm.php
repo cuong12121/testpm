@@ -3,7 +3,7 @@ require_once ("libraries/toolbar/toolbar.php");
 require_once ("libraries/fsrouter.php");
 require_once ("libraries/pagination.php");
 require_once ("libraries/template_helper.php");
-// require_once ('../libraries/errors.php');
+require_once ('../libraries/errors.php');
 require_once ('../libraries/fsfactory.php');
 require_once ("libraries/fssecurity.php");
 require_once ('libraries/controllers.php');
