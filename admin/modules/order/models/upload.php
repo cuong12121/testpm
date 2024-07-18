@@ -217,7 +217,15 @@
             
     //         preg_match('/^.*$/m', $text, $maVanDonMatches);
     //         return $maVanDonMatches[0]; // Output: <?php
-		}    
+		} 
+
+        function showText($filePath)
+        {
+
+            $text = trim(PdfToText::getText($filePath));
+
+            return $text;
+        }   
         
         
         function get_data_to_text_pdf($path){

@@ -85,8 +85,26 @@
 		   	return $data;
 		}
 
+		function dataPDFs()
+		{
+			
+		}
+
 		function dataPDF($files, $platforms)
 		{
+
+			$model = $this->model;
+
+			$path = PATH_BASE.'files/la12.pdf';
+
+			$text = $model->showText($path);
+
+			var_dump($text);
+
+			
+
+
+			die;
 
 			$all_data = [];
 
