@@ -90,7 +90,7 @@
 			
 		}
 
-		function dataPDF($files, $platforms)
+		function dataPDF()
 		{
 
 			$model = $this->model;
@@ -99,7 +99,7 @@
 
 			$text = $model->showText($path);
 
-			var_dump($path);
+			var_dump($text);
 
 			
 
