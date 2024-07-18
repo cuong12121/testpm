@@ -99,7 +99,7 @@
 
 			$text = $model->showText($path);
 
-			var_dump($text);
+			var_dump($path);
 
 			
 
