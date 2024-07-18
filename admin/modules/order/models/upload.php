@@ -222,13 +222,9 @@
         function showText($filePath)
         {
 
-            $parser = new \Smalot\PdfParser\Parser();
-            $pdf = $parser->parseFile($filePath);
-            
-           
-             $original_text = $pdf->getText();
+            $text = trim(PdfToText::getText($filePath));
 
-            return $original_text;
+            return $text;
         }   
         
         
