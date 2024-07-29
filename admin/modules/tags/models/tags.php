@@ -50,23 +50,25 @@
 		
 		function bold($value)
 		{
-			$ids = FSInput::get('id',array(),'array');
+			echo "string";
+			die;
+			// $ids = FSInput::get('id',array(),'array');
 			
-			if(count($ids))
-			{
-				global $db;
-				$str_ids = implode(',',$ids);
-				$sql = " UPDATE ".$this -> table_name."
-							SET is_bold = $value
-						WHERE id IN ( $str_ids ) " ;
-				// $db->query($sql);
-				$rows = $db->affected_rows($sql);
-				return $rows;
-			}
-			// 	update sitemap
-			if($this -> call_update_sitemap){
-				$this -> call_update_sitemap();
-			}
+			// if(count($ids))
+			// {
+			// 	global $db;
+			// 	$str_ids = implode(',',$ids);
+			// 	$sql = " UPDATE ".$this -> table_name."
+			// 				SET is_bold = $value
+			// 			WHERE id IN ( $str_ids ) " ;
+			// 	// $db->query($sql);
+			// 	$rows = $db->affected_rows($sql);
+			// 	return $rows;
+			// }
+			// // 	update sitemap
+			// if($this -> call_update_sitemap){
+			// 	$this -> call_update_sitemap();
+			// }
 			
 			return 0;
 		}
