@@ -11,6 +11,10 @@
 			parent::display();
 			$sort_field = $this -> sort_field;
 			$sort_direct = $this -> sort_direct;
+
+			var_dump(1);
+
+			die;
 			
 			$model  = $this -> model;
 			$list = $model->get_data();
