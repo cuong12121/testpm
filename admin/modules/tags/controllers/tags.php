@@ -12,14 +12,16 @@
 			$sort_field = $this -> sort_field;
 			$sort_direct = $this -> sort_direct;
 
-			var_dump(1);
 
-			die;
-			
-			$model  = $this -> model;
-			$list = $model->get_data();
+			// $model  = $this -> model;
+			// $list = $model->get_data();
 			
 			$pagination = $model->getPagination();
+
+			// var_dump(1);
+
+			// die;
+			
 			include 'modules/'.$this->module.'/views/'.$this->view.'/list.php';
 		}
 		
