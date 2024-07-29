@@ -13,7 +13,7 @@
 			$sort_direct = $this -> sort_direct;
 
 
-			// $model  = $this -> model;
+			$model  = $this -> model;
 			// $list = $model->get_data();
 			
 			$pagination = $model->getPagination();
