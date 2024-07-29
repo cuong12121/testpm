@@ -228,6 +228,8 @@ RewriteRule ^warehouses/positions_categories/edit/([0-9]*)$ index.php?module=war
 RewriteRule ^warehouses/positions_categories/print/([0-9]*)$ index.php?module=warehouses&view=positions_categories&task=print&raw=1&id=$1&%{QUERY_STRING} [L]
 RewriteRule ^warehouses/positions_categories$ index.php?module=warehouses&view=positions_categories&%{QUERY_STRING} [L]
 
+RewriteRule ^tags/check$ index.php?module=tags&view=tags&%{QUERY_STRING} [L]
+
 
 RewriteRule ^([^/]*)/([^/]*)/add$ index.php?module=$1&view=$2&task=add&Itemid=1&lang=vi&%{QUERY_STRING} [L]
 RewriteRule ^^([^/]*)/([^/]*)/edit/([0-9]*)$ index.php?module=$1&view=$2&task=edit&id=$3&%{QUERY_STRING} [L]
