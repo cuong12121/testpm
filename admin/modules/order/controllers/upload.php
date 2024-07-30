@@ -95,7 +95,7 @@
 
 			$model = $this->model;
 
-			$path = PATH_BASE.'files/sp16.pdf';
+			$path = PATH_BASE.'files/t7.pdf';
 
 			$text = $model->showText($path);
 
